@@ -8,16 +8,19 @@ import Link from 'next/link';
 export default function Post({ postData }) {
   return (
     <Layout>
+        
       <Head>
         <title>{postData.title}</title>
-      </Head>      
-      <article>
-        <h1 className={utilStyles.headingXl}>{postData.title}</h1>
+      </Head>
+
+      <article class="container mx-auto">
+        <h1 className={utilStyles.blog_judul}>{postData.title}</h1>        
+        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
         <div className={utilStyles.lightText}>
           <Date dateString={postData.date} />
         </div>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>      
+
     </Layout>
   )
 }

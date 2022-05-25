@@ -12,24 +12,28 @@ export default function Layout({ children, home }) {
         <div className={styles.container}>
             <Head>
                 <link rel="icon" href="/favicon.ico" />
-                <meta name="description" content="Learn how to build a personal website using Next.js" />
+                <meta name="description" content="Yuuki Server" />
             </Head>
-            <header className={styles.header}>
-                {home ? (
+            <header>
+            
+            </header>
+            {children}
+            {home ? (
                     <>
 
                     </>
                 ) : (
                     <>
-                        <h3>
+                        <h3 class="text-center">
                             <Link href="/">
-                                <a>Back to home</a>
+                             <button class="btn btn-primary">Back to Home</button>
                             </Link>
                         </h3>
                     </>
                 )}
-            </header>
-            {children}
+            <footer>
+                Powered by Vercel
+            </footer>
         </div>
     )
 }

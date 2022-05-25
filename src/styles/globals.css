@@ -1,18 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
     padding: 0;
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-        Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-        sans-serif;
+    color: white;
 }
 
-* {
-    box-sizing: border-box;
-}
-
-.container {
-    min-height: 100vh;
+.home {
+    min-height: 60vh;
     padding: 0 0.5rem;
     display: flex;
     flex-direction: column;
@@ -20,37 +18,9 @@ body {
     align-items: center;
 }
 
-main {
-    padding: 5rem 0;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-footer {
-    width: 100%;
-    height: 100px;
-    border-top: 1px solid #eaeaea;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-footer img {
-    margin-left: 0.5rem;
-}
-
-footer a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
+h2 {
+    font-size: 2.2rem;
+    line-height: 2.2;
 }
 
 .title a {
@@ -73,6 +43,34 @@ a {
 .title,
 .description {
     text-align: center;
+}
+
+main {
+    padding: 5rem 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
 .description {
@@ -129,4 +127,25 @@ a {
         width: 100%;
         flex-direction: column;
     }
+}
+
+/* CODE BLOCK */
+code {
+    display: block;
+    max-height: 500px;
+    width: 100%;
+    margin: 20px 0;
+    font-size: 17px;
+    line-height: 23px;
+    position: relative;
+    overflow: auto;
+    background: black;
+    padding: 12px;
+}
+
+.container > ol, ul, menu {
+    margin: 0;
+    padding: 0;
+    line-height: 32px;
+    list-style: inside;
 }

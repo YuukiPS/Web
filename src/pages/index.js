@@ -14,24 +14,26 @@ export async function getStaticProps() {
 export default function Home({ allPostsData }) {
   return (
     <Layout home>
-      <div className="container">
-        <Head>
-          <title>Yuuki Private Server</title>
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <h1 className="title">
+      
+      <Head>
+        <title>Yuuki Private Server</title>
+      </Head>
+
+      <div class="home">
+
+        <h1 class="title">
           Welcome to Yuuki Private Server
         </h1>
 
-        <p className="description">
+        <p class="description">
           This site is still under developer. please check regularly
         </p>
 
-        <div className="grid">
+        <div class="grid">
 
           {allPostsData.map(({ id, date, title, short }) => (
 
-            <a href={`/posts/${id}`} className="card">
+            <a href={`/posts/${id}`} class="card">
               <h3>{title} &rarr;</h3>
               <p>{short}</p>
               {date}
@@ -40,11 +42,6 @@ export default function Home({ allPostsData }) {
           ))}
 
         </div>
-
-        <footer>Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className="logo" />
-        </footer>
-
       </div>
     </Layout>
   )
