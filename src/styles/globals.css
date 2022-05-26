@@ -54,10 +54,14 @@ main {
     align-items: center;
 }
 
-footer a {
+footer {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+}
+
+footer a {
+    margin-top: 30px;
 }
 
 a {
@@ -130,7 +134,9 @@ code {
     padding: 12px;
 }
 
-.container > ol, ul, menu {
+.container>ol,
+ul,
+menu {
     margin: 0;
     padding: 0;
     line-height: 32px;

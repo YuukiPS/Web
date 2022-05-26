@@ -37,10 +37,11 @@ export default function Layout({ children, home }) {
                         <img src="https://discordapp.com/api/guilds/964119462188040202/widget.png?style=banner2" alt="DockerGC"></img>
                     </a>
                 </p>
-                <p>
-                    Powered by Vercel
+                <p class="mt-4">
+                    <a href="https://yuuki.me/" target="_blank" rel="sponsored">Made with <span class="heart">❤</span> in Indonesia,Makassar</a>
                 </p>
-                
+                <p>Powered by Vercel | <a href="https://stats.uptimerobot.com/L8Nx6FL4V" rel="nofollow" target="_blank">Status Server</a></p>
+
             </footer>
         </div>
     )
