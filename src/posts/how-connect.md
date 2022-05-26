@@ -65,6 +65,3 @@ mitmdump -s proxy.py -k --ssl-insecure --set block_global=false
 - On Phone (Android 7+), Install Magisk+MagiskTrustUserCerts - [more info](https://platinmods.com/threads/intercepting-https-traffic-from-apps-on-android-7-and-above-root.131373/)
 - Change proxy on wifi settings with your server ip
 - Login with your username then password with random then login.
-
-## For server list please join:
-[![DockerGC](https://discordapp.com/api/guilds/964119462188040202/widget.png?style=banner2)](https://discord.gg/tRYMG7Nm2D)

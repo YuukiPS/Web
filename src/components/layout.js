@@ -15,24 +15,32 @@ export default function Layout({ children, home }) {
                 <meta name="description" content="Yuuki Server" />
             </Head>
             <header>
-            
+
             </header>
             {children}
             {home ? (
-                    <>
+                <>
 
-                    </>
-                ) : (
-                    <>
-                        <h3 class="text-center">
-                            <Link href="/">
-                             <button class="btn btn-primary">Back to Home</button>
-                            </Link>
-                        </h3>
-                    </>
-                )}
-            <footer>
-                Powered by Vercel
+                </>
+            ) : (
+                <>
+                    <h3 class="text-center">
+                        <Link href="/">
+                            <button class="btn btn-primary">Back to Home</button>
+                        </Link>
+                    </h3>
+                </>
+            )}
+            <footer class="text-center py-3">
+                <p>
+                    <a href="https://discord.gg/tRYMG7Nm2D">
+                        <img src="https://discordapp.com/api/guilds/964119462188040202/widget.png?style=banner2" alt="DockerGC"></img>
+                    </a>
+                </p>
+                <p>
+                    Powered by Vercel
+                </p>
+                
             </footer>
         </div>
     )

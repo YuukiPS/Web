@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Layout, { siteTitle } from '../components/layout'
 import { getSortedPostsData } from '../lib/posts'
-
+import Online from '../components/online'
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
   return {
@@ -14,7 +14,7 @@ export async function getStaticProps() {
 export default function Home({ allPostsData }) {
   return (
     <Layout home>
-      
+
       <Head>
         <title>Yuuki Private Server</title>
       </Head>
@@ -28,6 +28,15 @@ export default function Home({ allPostsData }) {
         <p class="description">
           This site is still under developer. please check regularly
         </p>
+
+        <div class="text-center py-3">
+          
+          <div class="stats bg-primary text-primary-content">
+            <Online server="sg" />
+            <Online server="de" />
+          </div>
+
+        </div>
 
         <div class="grid">
 
