@@ -34,6 +34,48 @@ class Handlers
 - Open Game
 - After you open it, a message will appear telling you to select the Official Server (please click once if it's the first time, to download game data) after that you select "settings" on the input page type "https://sg.game.yuuki.me" after that checklist "forced mode" then press return and select "custom server"
 
+## iOS User (Shadowrocket)
+- Make sure you change the nearest server address to deal with high ping (***de.game.yuuki.me*** if you are european and ***sg.game.yuuki.me*** for asia)
+- [Shadowrocket](https://apps.apple.com/id/app/shadowrocket/id932747118?l=id) > Configure Modules > > Create New Module and write/copy this code.
+```sh
+#!name=Genshin Impact Routing Module MitM
+#!desc=A module to use Grasscutter, with MITM handled via Surge, moudle written by 𝐖𝐨𝐰.
+
+[URL Rewrite]
+# Handle MITM via Surge, discarding mitmdump.
+hk4e-api-os-static.mihoyo.com de.game.yuuki.me header
+hk4e-sdk-os.mihoyo.com de.game.yuuki.me header
+dispatchosglobal.yuanshen.com de.game.yuuki.me header
+osusadispatch.yuanshen.com de.game.yuuki.me header
+account.mihoyo.com de.game.yuuki.me header
+log-upload-os.mihoyo.com de.game.yuuki.me header
+dispatchcntest.yuanshen.com de.game.yuuki.me header
+devlog-upload.mihoyo.com de.game.yuuki.me header
+webstatic.mihoyo.com de.game.yuuki.me header
+log-upload.mihoyo.com de.game.yuuki.me header
+hk4e-sdk.mihoyo.com de.game.yuuki.me header
+api-beta-sdk.mihoyo.com de.game.yuuki.me header
+api-beta-sdk-os.mihoyo.com de.game.yuuki.me header
+cnbeta01dispatch.yuanshen.com de.game.yuuki.me header
+dispatchcnglobal.yuanshen.com de.game.yuuki.me header
+cnbeta02dispatch.yuanshen.com de.game.yuuki.me header
+sdk-os-static.mihoyo.com de.game.yuuki.me header
+webstatic-sea.mihoyo.com de.game.yuuki.me header
+hk4e-sdk-os-static.hoyoverse.com de.game.yuuki.me header
+webstatic-sea.hoyoverse.com de.game.yuuki.me header
+sdk-os-static.hoyoverse.com de.game.yuuki.me header
+api-account-os.hoyoverse.com de.game.yuuki.me header
+hk4e-sdk-os.hoyoverse.com de.game.yuuki.me header
+overseauspider.yuanshen.com de.game.yuuki.me header
+gameapi-account.mihoyo.com de.game.yuuki.me header
+minor-api.mihoyo.com de.game.yuuki.me header
+hk4e-sdk-os.hoyoverse.com de.game.yuuki.me header
+uspider.yuanshen.com de.game.yuuki.me header
+sdk-static.mihoyo.com de.game.yuuki.me header
+
+[MITM]
+hostname = %APPEND% api-os-takumi.mihoyo.com,hk4e-api-os-static.mihoyo.com,hk4e-sdk-os.mihoyo.com,dispatchosglobal.yuanshen.com,osusadispatch.yuanshen.com,account.mihoyo.com,log-upload-os.mihoyo.com,dispatchcntest.yuanshen.com,devlog-upload.mihoyo.com,webstatic.mihoyo.com,log-upload.mihoyo.com,hk4e-sdk.mihoyo.com,api-beta-sdk.mihoyo.com,api-beta-sdk-os.mihoyo.com,cnbeta01dispatch.yuanshen.com,dispatchcnglobal.yuanshen.com,cnbeta02dispatch.yuanshen.com,sdk-os-static.mihoyo.com,webstatic-sea.mihoyo.com,hk4e-sdk-os-static.hoyoverse.com,webstatic-sea.hoyoverse.com,sdk-os-static.hoyoverse.com,api-account-os.hoyoverse.com,hk4e-sdk-os.hoyoverse.com,overseauspider.yuanshen.com,gameapi-account.mihoyo.com,minor-api.mihoyo.com,public-data-api.mihoyo.com,uspider.yuanshen.com,sdk-static.mihoyo.com, de.game.yuuki.me
+```
 ## Android User (No-Root) (Termux)
 - Do backup first (apk & data game) because patching apk cannot be updated with game that is installed now.
 - Install patched apk that accepts user ca certs, unfortunately you will have to uninstall regular and [install apk patched](https://file.yuuki.me/0:/Leak/uc-patched.apk) (If file is miss/not trusted you can do it yourself with [apk-mitm](https://github.com/shroudedcode/apk-mitm))
