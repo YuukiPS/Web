@@ -30,7 +30,7 @@ class Handlers
 
 ## Android User (No-Root) (Apk Switch Server)
 - Do backup first (apk & data game) because patching apk cannot be updated with game that is installed now.
-- Install [APK Switch Server](/posts/2-7.md)
+- Install [APK Switch Server](/posts/2-7)
 - Open Game
 - After you open it, a message will appear telling you to select **Official Server** (please click once if it's the first time, to download game data) 
 - After that you select "settings" on input page type "**https://sg.game.yuuki.me**" 
@@ -80,7 +80,7 @@ hostname = %APPEND% api-os-takumi.mihoyo.com,hk4e-api-os-static.mihoyo.com,hk4e-
 ```
 ## Android User (No-Root) (Termux) (Not recommended for beginners)
 - Do backup first (apk & data game) because patching apk cannot be updated with game that is installed now.
-- Install patched apk that accepts user ca certs, unfortunately you will have to uninstall regular and [install apk patched](https://file.yuuki.me/0:/Leak/uc-patched.apk) (If file is miss/not trusted you can do it yourself with [apk-mitm](https://github.com/shroudedcode/apk-mitm))
+- Install patched apk that accepts user ca certs, unfortunately you will have to uninstall regular and [install apk patched](https://file.yuuki.me/0:/Leak/) (If file is miss/not trusted you can do it yourself with [apk-mitm](https://github.com/shroudedcode/apk-mitm))
 - Install Termux
 - use these commands
 ```sh
