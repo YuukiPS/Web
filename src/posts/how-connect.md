@@ -30,14 +30,14 @@ class Handlers
 
 ## Android User (No-Root) (Apk Switch Server)
 - Do backup first (apk & data game) because patching apk cannot be updated with game that is installed now.
-- Install [APK Switch Server](https://github.com/577fkj/GenshinProxy/releases/download/releases/genshin-impact-lv0-lspatched.apk)
+- Install [APK Switch Server](/posts/2-7.md)
 - Open Game
-- After you open it, a message will appear telling you to select ***Official Server*** (please click once if it's the first time, to download game data) 
-- After that you select "settings" on input page type "***https://sg.game.yuuki.me***" 
-- After that checklist "forced mode" then press return and select "***Custom Server***"
+- After you open it, a message will appear telling you to select **Official Server** (please click once if it's the first time, to download game data) 
+- After that you select "settings" on input page type "**https://sg.game.yuuki.me**" 
+- After that checklist "forced mode" then press return and select "**Custom Server**"
 
 ## iOS User (Shadowrocket)
-- Make sure you change the nearest server address to deal with high ping (***de.game.yuuki.me*** if you are european and ***sg.game.yuuki.me*** for asia)
+- Make sure you change the nearest server address to deal with high ping (**de.game.yuuki.me** if you are european and **sg.game.yuuki.me** for asia)
 - [Shadowrocket](https://apps.apple.com/id/app/shadowrocket/id932747118?l=id) > Configure Modules > > Create New Module and write/copy this code.
 ```sh
 #!name=Genshin Impact Routing Module MitM
