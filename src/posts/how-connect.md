@@ -28,7 +28,7 @@ class Handlers
 - In Fiddler in "FiddlerScript" tab, copy this script then click save.
 - Login with your username then password with random then login.
 
-[![Tutorial Fiddler Metode](https://youtube-md.vercel.app/UWsFbzAGNiA/640/360)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+[![Tutorial Fiddler Metode](https://youtube-md.vercel.app/UWsFbzAGNiA/640/360)](https://www.youtube.com/watch?v=UWsFbzAGNiA)
 
 ## Android User (No-Root) (Apk Switch Server)
 - Do backup first (apk & data game) because patching apk cannot be updated with game that is installed now.
