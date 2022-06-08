@@ -1,16 +1,16 @@
-import Layout from '../../components/layout'
+import Layout, { siteTitle } from '../../components/layout'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import Head from 'next/head'
 import Date from '../../components/date'
 import utilStyles from '../../styles/utils.module.css'
-import Link from 'next/link';
 
 export default function Post({ postData }) {
   return (
+
     <Layout>
-        
+
       <Head>
-        <title>{postData.title}</title>
+        <title>{postData.title} - {siteTitle}</title>
       </Head>
 
       <article class="container mx-auto">

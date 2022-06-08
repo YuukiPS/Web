@@ -16,13 +16,13 @@ export default function Home({ allPostsData }) {
     <Layout home>
 
       <Head>
-        <title>Yuuki Private Server</title>
+      <title>{siteTitle}</title>
       </Head>
 
       <div class="home">
 
         <h1 class="title">
-          Welcome to Yuuki Private Server
+          Welcome to {siteTitle}
         </h1>
 
         <p class="description">
