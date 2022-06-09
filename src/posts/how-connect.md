@@ -6,7 +6,7 @@ date: "2022-05-25"
 
 ## Windows User (Fiddler)
 - Before starting, open game first and then logout if you have logged in before and then exit again.
-- Install [Fiddler](https://file.yuuki.me/0:/Leak/FiddlerSetup.exe) then Open Fiddler then click Tools -> Options -> HTTPS -> Check "Capture HTTPS" and "Decrypt HTTPS" then click "Actions" then click "Trues Root" then click yes if a popup appears.
+- Install [Fiddler](https://file.yuuki.me/0:/Project/Grasscutter/App/Proxy/PC/Fiddler/) then Open Fiddler then click Tools -> Options -> HTTPS -> Check "Capture HTTPS" and "Decrypt HTTPS" then click "Actions" then click "Trues Root" then click yes if a popup appears.
 ```sh
 import System;
 import System.Windows.Forms;
@@ -32,7 +32,7 @@ class Handlers
 
 ## Android User (No-Root) (Apk Switch Server)
 - Do backup first (apk & data game) because patching apk cannot be updated with game that is installed now.
-- Install [APK Switch Server](/posts/2-7)
+- Install [APK Switch Server](https://file.yuuki.me/0:/Project/Grasscutter/App/Proxy/Android/SwitchAPK/)
 - Open Game
 - After you open it, a message will appear telling you to select **Official Server** (please click once if it's the first time, to download game data) 
 - After that you select "settings" on input page type "**https://sg.game.yuuki.me**" 
@@ -82,7 +82,7 @@ hostname = %APPEND% api-os-takumi.mihoyo.com,hk4e-api-os-static.mihoyo.com,hk4e-
 ```
 ## Android User (No-Root) (Termux) (Not recommended for beginners)
 - Do backup first (apk & data game) because patching apk cannot be updated with game that is installed now.
-- Install patched apk that accepts user ca certs, unfortunately you will have to uninstall regular and [install apk patched](https://file.yuuki.me/0:/Leak/) (If file is miss/not trusted you can do it yourself with [apk-mitm](https://github.com/shroudedcode/apk-mitm))
+- Install patched apk that accepts user ca certs, unfortunately you will have to uninstall regular and [Patched NoSSL](https://file.yuuki.me/0:/Project/Grasscutter/App/Proxy/Android/NoSSL/) (If file is miss/not trusted you can do it yourself with [apk-mitm](https://github.com/shroudedcode/apk-mitm))
 - Install Termux
 - use these commands
 ```sh
