@@ -13,7 +13,7 @@ docker network create gc
 # Datebase (just once) (db:27017 change ip and port and delete this if you already have a database)
 docker run --rm -it --network gc --name db -d mongo &
 # Game server (just once download resources with -f 'yes' after that you can set -f 'no')
-docker run --rm -it --network gc -v resources:/home/Grasscutter/resources -p 22102:22102/udp -p 443:443/tcp siakbary/dockergc:alpine-Patch-2.7-811d5e0 -d 'mongodb://db:27017' -b 'localhost' -g 'localhost' -f 'yes'
+docker run --rm -it --network gc -v resources:/home/Grasscutter/resources -p 22102:22102/udp -p 443:443/tcp siakbary/dockergc:alpine-Patch-2.7-93aabb3 -d 'mongodb://db:27017' -b 'localhost' -g 'localhost' -f 'yes'
 ```
 or (if you have compose)
 ```sh

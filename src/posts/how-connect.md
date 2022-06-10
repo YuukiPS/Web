@@ -6,7 +6,7 @@ date: "2022-05-25"
 
 ## Windows User (Fiddler)
 - Before starting, open game first and then logout if you have logged in before and then exit again.
-- Install [Fiddler](https://file.yuuki.me/0:/Project/Grasscutter/App/Proxy/PC/Fiddler/) then Open Fiddler then click Tools -> Options -> HTTPS -> Check "Capture HTTPS" and "Decrypt HTTPS" then click "Actions" then click "Trues Root" then click yes if a popup appears.
+- Install [Fiddler](https://file.yuuki.me/0:/Project/Grasscutter/App/Proxy/PC/Fiddler/FiddlerSetup_YuukiPS.exe) then Open Fiddler then click Tools -> Options -> HTTPS -> Check "Capture HTTPS" and "Decrypt HTTPS" then click "Actions" then click "Trues Root" then click yes if a popup appears.
 ```sh
 import System;
 import System.Windows.Forms;
@@ -28,7 +28,7 @@ class Handlers
 - In Fiddler in "FiddlerScript" tab, copy this script then click save.
 - Login with your username then password with random then login.
 
-[![Tutorial Fiddler Metode](https://youtube-md.vercel.app/UWsFbzAGNiA/640/360)](https://www.youtube.com/watch?v=UWsFbzAGNiA)
+[![Tutorial Fiddler Metode](https://youtube-md.vercel.app/IrqlU-Aaw3Q/640/360)](https://www.youtube.com/watch?v=IrqlU-Aaw3Q)
 
 ## Android User (No-Root) (Apk Switch Server)
 - Do backup first (apk & data game) because patching apk cannot be updated with game that is installed now.
