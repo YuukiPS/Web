@@ -38,6 +38,8 @@ class Handlers
 - After that you select "settings" on input page type "**https://sg.game.yuuki.me**" 
 - After that checklist "forced mode" then press return and select "**Custom Server**"
 
+[![Tutorial Apk Switch Server Metode](https://youtube-md.vercel.app/XfHjpvwuZvo/640/360)](https://www.youtube.com/watch?v=XfHjpvwuZvo)
+
 ## iOS User (Shadowrocket)
 - Make sure you change the nearest server address to deal with high ping (**de.game.yuuki.me** if you are european and **sg.game.yuuki.me** for asia)
 - [Shadowrocket](https://apps.apple.com/id/app/shadowrocket/id932747118?l=id) > Configure Modules > > Create New Module and write/copy this code.
