@@ -29,8 +29,25 @@ class Handlers
 - Login with your username then password with random then login.
 
 [![Tutorial Fiddler Metode](https://youtube-md.vercel.app/IrqlU-Aaw3Q/640/360)](https://www.youtube.com/watch?v=IrqlU-Aaw3Q)
-
-## Android User (No-Root) (Apk Switch Server)
+## Android User (No-Root) (Termux)
+- Do backup first (apk & data game) because patching apk cannot be updated with game that is installed now.
+- Install [Patched APK](https://file.yuuki.me/0:/Project/Grasscutter/Game%20Data/Android/2.8/Release/Global/Genshin%20Impact_2.8.0_MetaData_NOSSL_NOProxy_.apk) that accepts "Any CA Certs" and with Patch MetaData, unfortunately you will have to uninstall regular.
+- Install [Termux](https://f-droid.org/repo/com.termux_118.apk) (Don't Install Google Play Store version)
+- Copy and run this command
+```sh
+pkg install -y wget openssh # this is needed to run wget
+wget https://s.id/InstallPS
+chmod +x InstallPS # permission to be accessed
+./InstallPS
+```
+- then run proxy with
+```sh
+./run.sh
+```
+- Then go to wifi settings and set proxy to 127.0.0.1 and 8080. Note that proxies are ignored if you are using a VPN.
+- Open http://mitm.it/ in your browser, download certificate. Then go to settings and install it.
+- Play Game
+## Android User (No-Root) (Apk Switch Server) (Not yet available)
 - Do backup first (apk & data game) because patching apk cannot be updated with game that is installed now.
 - Install [APK Switch Server](https://file.yuuki.me/0:/Project/Grasscutter/App/Proxy/Android/SwitchAPK/)
 - Open Game
@@ -40,9 +57,9 @@ class Handlers
 
 [![Tutorial Apk Switch Server Metode](https://youtube-md.vercel.app/XfHjpvwuZvo/640/360)](https://www.youtube.com/watch?v=XfHjpvwuZvo)
 
-## iOS User (Shadowrocket)
+## iOS User (Shadowrocket) (Not yet available)
 - Make sure you change the nearest server address to deal with high ping (**de.game.yuuki.me** if you are european and **sg.game.yuuki.me** for asia)
-- [Shadowrocket](https://apps.apple.com/id/app/shadowrocket/id932747118?l=id) > Configure Modules > > Create New Module and write/copy this code.
+- [Shadowrocket](https://apps.apple.com/id/app/shadowrocket/id932747118?l=id) > Configure Modules > Create New Module and write/copy this code.
 ```sh
 #!name=Genshin Impact Routing Module MitM
 #!desc=A module to use Grasscutter, with MITM handled via Surge, moudle written by 𝐖𝐨𝐰.
@@ -82,30 +99,6 @@ sdk-static.mihoyo.com de.game.yuuki.me header
 [MITM]
 hostname = %APPEND% api-os-takumi.mihoyo.com,hk4e-api-os-static.mihoyo.com,hk4e-sdk-os.mihoyo.com,dispatchosglobal.yuanshen.com,osusadispatch.yuanshen.com,account.mihoyo.com,log-upload-os.mihoyo.com,dispatchcntest.yuanshen.com,devlog-upload.mihoyo.com,webstatic.mihoyo.com,log-upload.mihoyo.com,hk4e-sdk.mihoyo.com,api-beta-sdk.mihoyo.com,api-beta-sdk-os.mihoyo.com,cnbeta01dispatch.yuanshen.com,dispatchcnglobal.yuanshen.com,cnbeta02dispatch.yuanshen.com,sdk-os-static.mihoyo.com,webstatic-sea.mihoyo.com,hk4e-sdk-os-static.hoyoverse.com,webstatic-sea.hoyoverse.com,sdk-os-static.hoyoverse.com,api-account-os.hoyoverse.com,hk4e-sdk-os.hoyoverse.com,overseauspider.yuanshen.com,gameapi-account.mihoyo.com,minor-api.mihoyo.com,public-data-api.mihoyo.com,uspider.yuanshen.com,sdk-static.mihoyo.com, de.game.yuuki.me
 ```
-## Android User (No-Root) (Termux) (Not recommended for beginners)
-- Do backup first (apk & data game) because patching apk cannot be updated with game that is installed now.
-- Install patched apk that accepts user ca certs, unfortunately you will have to uninstall regular and [Patched NoSSL](https://file.yuuki.me/0:/Project/Grasscutter/App/Proxy/Android/NoSSL/) (If file is miss/not trusted you can do it yourself with [apk-mitm](https://github.com/shroudedcode/apk-mitm))
-- Install Termux
-- use these commands
-```sh
-apt update && apt full-upgrade
-pkg install python wget rustc-dev nano
-python3 -m ensurepip --upgrade
-python3 -m pip install --user pipx
-python3 -m pipx ensurepath
-export CARGO_BUILD_TARGET=aarch64-linux-android
-pipx install mitmproxy
-```
-- Now download proxy config: 
-```sh
-git clone https://gitlab.com/yukiz/grasscutter-proxy
-cd grasscutter-proxy
-mitmdump -s proxy.py -k --ssl-insecure --set block_global=false
-```
-- Then go to wifi settings and set proxy to 127.0.0.1 and 8080. Note that proxies are ignored if you are using a VPN.
-- Open http://mitm.it/ in your browser, download certificate. Then go to settings and install it.
-- Play Game
-
 ## Android User (Root) (Fiddler Windows for Proxy) (Not recommended for beginners)
 - follow step "Windows User Fiddler"
 - After you follow it, Go to Tools -> Options -> Connection -> Check "Allow remote computer to connect" and make sure the windows firewall is off and don't forget to change the port other than 8888 (change it like 8887) - [more info](https://www.telerik.com/blogs/how-to-capture-android-traffic-with-fiddler)
