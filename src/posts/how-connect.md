@@ -17,6 +17,7 @@ class Handlers
     static function OnBeforeRequest(oS: Session) {
         if(oS.host.EndsWith(".yuanshen.com") || oS.host.EndsWith(".hoyoverse.com") || oS.host.EndsWith(".mihoyo.com")) {
             //This can also be replaced with another ip/domain server.
+            //oS.oRequest.headers.UriScheme = "http";
               oS.host = "de.game.yuuki.me";
             //oS.host = "sg.game.yuuki.me";
 			//oS.host = "localhost";
@@ -29,6 +30,14 @@ class Handlers
 - Login with your username then password with random then login.
 
 [![Tutorial Fiddler Metode](https://youtube-md.vercel.app/IrqlU-Aaw3Q/640/360)](https://www.youtube.com/watch?v=IrqlU-Aaw3Q)
+## Android User (No-Root) (Apk Switch Server)
+- Do backup first (apk & data game) because patching apk cannot be updated with game that is installed now.
+- Install [Mod Apk](/posts/update)
+- Open Game
+- After you open it, a message will appear telling you to select **Custom Server** (please click once if it's the first time, to download game data)
+- After that please select regional server on right button.
+
+[![Tutorial Apk Switch Server Metode](https://youtube-md.vercel.app/XfHjpvwuZvo/640/360)](https://www.youtube.com/watch?v=XfHjpvwuZvo)
 ## Android User (No-Root) (Termux)
 - Do backup first (apk & data game) because patching apk cannot be updated with game that is installed now.
 - Install [Patched APK](https://file.yuuki.me/0:/Project/Grasscutter/Game%20Data/Android/2.8/Release/Global/Genshin%20Impact_2.8.0_MetaData_NOSSL_NOProxy_.apk) that accepts "Any CA Certs" and with Patch MetaData, unfortunately you will have to uninstall regular.
@@ -47,16 +56,6 @@ chmod +x InstallPS # permission to be accessed
 - Then go to wifi settings and set proxy to 127.0.0.1 and 8080. Note that proxies are ignored if you are using a VPN.
 - Open http://mitm.it/ in your browser, download certificate. Then go to settings and install it.
 - Play Game
-## Android User (No-Root) (Apk Switch Server) (Not yet available)
-- Do backup first (apk & data game) because patching apk cannot be updated with game that is installed now.
-- Install [APK Switch Server](https://file.yuuki.me/0:/Project/Grasscutter/App/Proxy/Android/SwitchAPK/)
-- Open Game
-- After you open it, a message will appear telling you to select **Official Server** (please click once if it's the first time, to download game data) 
-- After that you select "settings" on input page type "**https://sg.game.yuuki.me**" 
-- After that checklist "forced mode" then press return and select "**Custom Server**"
-
-[![Tutorial Apk Switch Server Metode](https://youtube-md.vercel.app/XfHjpvwuZvo/640/360)](https://www.youtube.com/watch?v=XfHjpvwuZvo)
-
 ## iOS User (Shadowrocket) (Not yet available)
 - Make sure you change the nearest server address to deal with high ping (**de.game.yuuki.me** if you are european and **sg.game.yuuki.me** for asia)
 - [Shadowrocket](https://apps.apple.com/id/app/shadowrocket/id932747118?l=id) > Configure Modules > Create New Module and write/copy this code.
