@@ -147,3 +147,7 @@ menu {
     line-height: 32px;
     list-style: inside;
 }
+
+.new-line {
+    white-space: pre-line;
+  }

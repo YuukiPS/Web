@@ -9,29 +9,42 @@ export default function App({ server = "sg" }) {
     fetcher
   );
 
-  //console.log("tes", data);
-  if(server == "sg"){
+  if (server == "sg") {
     server = "Singapore"
   }
-  if(server == "de"){
-    server = "German"
+  if (server == "eu") {
+    server = "Dusseldorf"
   }
-  var online = "?";
-  if(data){
-    if(data.status){
-      if(data.status.playerCount){
-        online = data.status.playerCount;
+  if (server == "tes") {
+    server = "Beta Testing"
+  }
+
+  var online = "Offline";
+  var version = "Unknown";
+  var ram = "Unknown";
+  if (data) {
+    if (data.status) {
+      if (data.status.playerCount) {
+        online = data.status.playerCount + " Online";
+      }
+      if (data.status.DockerGC) {
+        version = data.status.DockerGC;
+      }
+      if (data.status.MemoryCurrently) {
+        ram = data.status.MemoryCurrently + " MB";
       }
     }
   }
-  
-  return (
 
-      <div class="stat">
-        <div class="stat-title">{server}</div>
-        <div class="stat-value">{online}</div>
-        <div class="stat-desc">currently online</div>
+  return (
+    <div class="stat">
+      <div class="stat-title">{server}</div>
+      <div class="stat-value">{online}</div>
+      <div class="stat-desc">
+        <div className="new-line">Version: {version}</div>
+        <div className="new-line">RAM: {ram}</div>
       </div>
+    </div>
 
   );
 }
