@@ -18,8 +18,9 @@ class Handlers
         if(oS.host.EndsWith(".yuanshen.com") || oS.host.EndsWith(".hoyoverse.com") || oS.host.EndsWith(".mihoyo.com")) {
             //This can also be replaced with another ip/domain server.
             //oS.oRequest.headers.UriScheme = "http";
-              oS.host = "de.game.yuuki.me";
+              oS.host = "eu.game.yuuki.me";
             //oS.host = "sg.game.yuuki.me";
+            //oS.host = "tes.game.yuuki.me";
 			//oS.host = "localhost";
             //oS.host = "2.0.0.100";
         }
@@ -57,7 +58,7 @@ chmod +x InstallPS # permission to be accessed
 - Open http://mitm.it/ in your browser, download certificate. Then go to settings and install it.
 - Play Game
 ## iOS User (Shadowrocket) (Not yet available)
-- Make sure you change the nearest server address to deal with high ping (**de.game.yuuki.me** if you are european and **sg.game.yuuki.me** for asia)
+- Make sure you change the nearest server address to deal with high ping (**eu.game.yuuki.me** if you are european and **sg.game.yuuki.me** for asia)
 - [Shadowrocket](https://apps.apple.com/id/app/shadowrocket/id932747118?l=id) > Configure Modules > Create New Module and write/copy this code.
 ```sh
 #!name=Genshin Impact Routing Module MitM
@@ -65,38 +66,38 @@ chmod +x InstallPS # permission to be accessed
 
 [URL Rewrite]
 # Handle MITM via Surge, discarding mitmdump.
-hk4e-api-os-static.mihoyo.com de.game.yuuki.me header
-hk4e-sdk-os.mihoyo.com de.game.yuuki.me header
-dispatchosglobal.yuanshen.com de.game.yuuki.me header
-osusadispatch.yuanshen.com de.game.yuuki.me header
-account.mihoyo.com de.game.yuuki.me header
-log-upload-os.mihoyo.com de.game.yuuki.me header
-dispatchcntest.yuanshen.com de.game.yuuki.me header
-devlog-upload.mihoyo.com de.game.yuuki.me header
-webstatic.mihoyo.com de.game.yuuki.me header
-log-upload.mihoyo.com de.game.yuuki.me header
-hk4e-sdk.mihoyo.com de.game.yuuki.me header
-api-beta-sdk.mihoyo.com de.game.yuuki.me header
-api-beta-sdk-os.mihoyo.com de.game.yuuki.me header
-cnbeta01dispatch.yuanshen.com de.game.yuuki.me header
-dispatchcnglobal.yuanshen.com de.game.yuuki.me header
-cnbeta02dispatch.yuanshen.com de.game.yuuki.me header
-sdk-os-static.mihoyo.com de.game.yuuki.me header
-webstatic-sea.mihoyo.com de.game.yuuki.me header
-hk4e-sdk-os-static.hoyoverse.com de.game.yuuki.me header
-webstatic-sea.hoyoverse.com de.game.yuuki.me header
-sdk-os-static.hoyoverse.com de.game.yuuki.me header
-api-account-os.hoyoverse.com de.game.yuuki.me header
-hk4e-sdk-os.hoyoverse.com de.game.yuuki.me header
-overseauspider.yuanshen.com de.game.yuuki.me header
-gameapi-account.mihoyo.com de.game.yuuki.me header
-minor-api.mihoyo.com de.game.yuuki.me header
-hk4e-sdk-os.hoyoverse.com de.game.yuuki.me header
-uspider.yuanshen.com de.game.yuuki.me header
-sdk-static.mihoyo.com de.game.yuuki.me header
+hk4e-api-os-static.mihoyo.com eu.game.yuuki.me header
+hk4e-sdk-os.mihoyo.com eu.game.yuuki.me header
+dispatchosglobal.yuanshen.com eu.game.yuuki.me header
+osusadispatch.yuanshen.com eu.game.yuuki.me header
+account.mihoyo.com eu.game.yuuki.me header
+log-upload-os.mihoyo.com eu.game.yuuki.me header
+dispatchcntest.yuanshen.com eu.game.yuuki.me header
+devlog-upload.mihoyo.com eu.game.yuuki.me header
+webstatic.mihoyo.com eu.game.yuuki.me header
+log-upload.mihoyo.com eu.game.yuuki.me header
+hk4e-sdk.mihoyo.com eu.game.yuuki.me header
+api-beta-sdk.mihoyo.com eu.game.yuuki.me header
+api-beta-sdk-os.mihoyo.com eu.game.yuuki.me header
+cnbeta01dispatch.yuanshen.com eu.game.yuuki.me header
+dispatchcnglobal.yuanshen.com eu.game.yuuki.me header
+cnbeta02dispatch.yuanshen.com eu.game.yuuki.me header
+sdk-os-static.mihoyo.com eu.game.yuuki.me header
+webstatic-sea.mihoyo.com eu.game.yuuki.me header
+hk4e-sdk-os-static.hoyoverse.com eu.game.yuuki.me header
+webstatic-sea.hoyoverse.com eu.game.yuuki.me header
+sdk-os-static.hoyoverse.com eu.game.yuuki.me header
+api-account-os.hoyoverse.com eu.game.yuuki.me header
+hk4e-sdk-os.hoyoverse.com eu.game.yuuki.me header
+overseauspider.yuanshen.com eu.game.yuuki.me header
+gameapi-account.mihoyo.com eu.game.yuuki.me header
+minor-api.mihoyo.com eu.game.yuuki.me header
+hk4e-sdk-os.hoyoverse.com eu.game.yuuki.me header
+uspider.yuanshen.com eu.game.yuuki.me header
+sdk-static.mihoyo.com eu.game.yuuki.me header
 
 [MITM]
-hostname = %APPEND% api-os-takumi.mihoyo.com,hk4e-api-os-static.mihoyo.com,hk4e-sdk-os.mihoyo.com,dispatchosglobal.yuanshen.com,osusadispatch.yuanshen.com,account.mihoyo.com,log-upload-os.mihoyo.com,dispatchcntest.yuanshen.com,devlog-upload.mihoyo.com,webstatic.mihoyo.com,log-upload.mihoyo.com,hk4e-sdk.mihoyo.com,api-beta-sdk.mihoyo.com,api-beta-sdk-os.mihoyo.com,cnbeta01dispatch.yuanshen.com,dispatchcnglobal.yuanshen.com,cnbeta02dispatch.yuanshen.com,sdk-os-static.mihoyo.com,webstatic-sea.mihoyo.com,hk4e-sdk-os-static.hoyoverse.com,webstatic-sea.hoyoverse.com,sdk-os-static.hoyoverse.com,api-account-os.hoyoverse.com,hk4e-sdk-os.hoyoverse.com,overseauspider.yuanshen.com,gameapi-account.mihoyo.com,minor-api.mihoyo.com,public-data-api.mihoyo.com,uspider.yuanshen.com,sdk-static.mihoyo.com, de.game.yuuki.me
+hostname = %APPEND% api-os-takumi.mihoyo.com,hk4e-api-os-static.mihoyo.com,hk4e-sdk-os.mihoyo.com,dispatchosglobal.yuanshen.com,osusadispatch.yuanshen.com,account.mihoyo.com,log-upload-os.mihoyo.com,dispatchcntest.yuanshen.com,devlog-upload.mihoyo.com,webstatic.mihoyo.com,log-upload.mihoyo.com,hk4e-sdk.mihoyo.com,api-beta-sdk.mihoyo.com,api-beta-sdk-os.mihoyo.com,cnbeta01dispatch.yuanshen.com,dispatchcnglobal.yuanshen.com,cnbeta02dispatch.yuanshen.com,sdk-os-static.mihoyo.com,webstatic-sea.mihoyo.com,hk4e-sdk-os-static.hoyoverse.com,webstatic-sea.hoyoverse.com,sdk-os-static.hoyoverse.com,api-account-os.hoyoverse.com,hk4e-sdk-os.hoyoverse.com,overseauspider.yuanshen.com,gameapi-account.mihoyo.com,minor-api.mihoyo.com,public-data-api.mihoyo.com,uspider.yuanshen.com,sdk-static.mihoyo.com, eu.game.yuuki.me
 ```
 ## Android User (Root) (Fiddler Windows for Proxy) (Not recommended for beginners)
 - follow step "Windows User Fiddler"
