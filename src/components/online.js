@@ -15,11 +15,11 @@ export default function App({ server = "sg" }) {
         server = "Beta Testing";
     }
 
-    var online = "Offline";
+    var online = "Nobody";
     var version = "Unknown";
     var traveler = "Unknown";
     var ram = "Unknown";
-    
+
     if (data) {
         if (data.status) {
             if (data.status.playerCount) {

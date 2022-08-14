@@ -1,58 +1,60 @@
-import Head from 'next/head'
-import Layout, { siteTitle } from '../components/layout'
-import { getSortedPostsData } from '../lib/posts'
-import Online from '../components/online'
+import Head from "next/head";
+import Link from "next/link";
+
+import Layout, { siteTitle } from "../components/layout";
+import Online from "../components/online";
+
+import { getSortedPostsData } from "../lib/posts";
+
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
-  return {
-    props: {
-      allPostsData,
-    },
-  };
+    const allPostsData = getSortedPostsData();
+    return {
+        props: {
+            allPostsData,
+        },
+    };
 }
 
 export default function Home({ allPostsData }) {
-  return (
-    <Layout home>
+    return (
+        <Layout home>
+            <Head>
+                <title>{siteTitle}</title>
+            </Head>
 
-      <Head>
-      <title>{siteTitle}</title>
-      </Head>
+            <h1 class="title">Welcome to {siteTitle}</h1>
 
-      <div class="home">
+            <p class="description">This site is still under developer. please check regularly</p>
 
-        <h1 class="title">
-          Welcome to {siteTitle}
-        </h1>
+            <div class="text-center py-3">
+                <div class="stats bg-primary text-primary-content">
+                    <Online server="sg" />
+                    <Online server="eu" />
+                    <Online server="tes" />
+                </div>
+            </div>
 
-        <p class="description">
-          This site is still under developer. please check regularly
-        </p>
+            <div class="grid">
+                <div class="flex justify-center gap-2 py-3">
+                    <a href="/command" class="btn btn-wide">
+                        Web Command
+                    </a>
 
-        <div class="text-center py-3">
-          
-          <div class="stats bg-primary text-primary-content">
-            <Online server="sg" />
-            <Online server="eu" />
-            <Online server="tes" />
-          </div>
+                    <a href="/genshin" class="btn btn-wide">
+                        Genshin Impact
+                    </a>
+                </div>
 
-        </div>
-
-        <div class="grid">
-
-          {allPostsData.map(({ id, date, title, short }) => (
-
-            <a href={`/posts/${id}`} class="card">
-              <h3>{title} &rarr;</h3>
-              <p>{short}</p>
-              {date}
-            </a>
-
-          ))}
-
-        </div>
-      </div>
-    </Layout>
-  )
+                <div class="flex justify-center gap-2 py-3">
+                    {allPostsData.map(({ id, date, title, short }) => (
+                        <a href={`/posts/${id}`} class="card">
+                            <h3>{title} &rarr;</h3>
+                            <p>{short}</p>
+                            {date}
+                        </a>
+                    ))}
+                </div>
+            </div>
+        </Layout>
+    );
 }
