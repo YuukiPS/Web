@@ -64,8 +64,11 @@ export default function Genshin() {
     }
 
     let Server_PC = "https://file.yuuki.me/0:/Project/Grasscutter/Game%20Data/PC/";
-    let Metadata_OS_PC_MOD = Server_PC + version + "/Release/Global/global-metadata.dat";
-    let Metadata_CN_PC_MOD = Server_PC + version + "/Release/Chinese/global-metadata.dat";
+    let Metadata_OS_PC_MOD = Server_PC + version + "/Release/Global/Patch/global-metadata-patched.dat";
+    let Metadata_CN_PC_MOD = Server_PC + version + "/Release/Chinese/Patch/global-metadata-patched.dat";
+    let Metadata_OS_PC_ORI2 = Server_PC + version + "/Release/Global/Patch/global-metadata-original.dat";
+    let Metadata_CN_PC_ORI2 = Server_PC + version + "/Release/Chinese/Patch/global-metadata-original.dat";
+    
     let DL_OS_Backup = Server_PC + version + "/Release/Global/" + DL_OS.substring(DL_OS.lastIndexOf("/") + 1);
     let DL_CN_Backup = Server_PC + version + "/Release/Chinese/" + DL_CN.substring(DL_CN.lastIndexOf("/") + 1);
 
@@ -98,7 +101,7 @@ export default function Genshin() {
                         </a>
                     </div>
 
-                    <h3 class="text-center py-3">Full Version (Alternative)</h3>
+                    <h3 class="text-center py-3">Full Version (Original Alternative)</h3>
                     <div class="flex justify-center gap-2 py-3">
                         <a href={`${DL_OS_Backup}`} class="btn btn-wide">
                             Global
@@ -127,6 +130,17 @@ export default function Genshin() {
                         </a>
 
                         <a href={`${Metadata_CN_PC_ORI}`} class="btn btn-wide">
+                            China
+                        </a>
+                    </div>
+
+                    <h3 class="text-center py-3">Metadata (Original Alternative)</h3>
+                    <div class="flex justify-center gap-2 py-3">
+                        <a href={`${Metadata_OS_PC_ORI2}`} class="btn btn-wide">
+                            Global
+                        </a>
+
+                        <a href={`${Metadata_CN_PC_ORI2}`} class="btn btn-wide">
                             China
                         </a>
                     </div>
