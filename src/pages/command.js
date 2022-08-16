@@ -83,7 +83,7 @@ export default function Command() {
                                 </label>
                                 <input
                                     type="text"
-                                    placeholder="sg.game.yuuki.com"
+                                    placeholder="sg.genshin.ps.yuuki.me"
                                     class="input input-bordered"
                                     id="server"
                                     name="server"

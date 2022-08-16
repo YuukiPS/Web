@@ -4,7 +4,7 @@ const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function App({ server = "sg" }) {
 
-    let url_server = `${server}.game.yuuki.me`; // TODO: move to *.*.ps.yuuki.me
+    let url_server = `${server}.genshin.ps.yuuki.me`; // TODO: add SR stats
 
     const { data, error } = useSWR(`https://${url_server}/status/server`, fetcher);
 
