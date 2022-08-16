@@ -63,14 +63,19 @@ export default function Genshin() {
         }
     }
 
-    let Server_PC = "https://file.yuuki.me/0:/Project/Grasscutter/Game%20Data/PC/";
-    let Metadata_OS_PC_MOD = Server_PC + version + "/Release/Global/Patch/global-metadata-patched.dat";
-    let Metadata_CN_PC_MOD = Server_PC + version + "/Release/Chinese/Patch/global-metadata-patched.dat";
-    let Metadata_OS_PC_ORI2 = Server_PC + version + "/Release/Global/Patch/global-metadata-original.dat";
-    let Metadata_CN_PC_ORI2 = Server_PC + version + "/Release/Chinese/Patch/global-metadata-original.dat";
+    let Server_PC  = "https://file.yuuki.me/0:/Project/GenshinImpact/Data";
+    let Server_PC2 = "https://drive.yuuki.me/share/ZOrLF1E5/GenshinImpact/Data/";
+
+    let Server_PC_OS=Server_PC + version + "/PC/Release/Global";
+    let Server_PC_CN=Server_PC + version + "/PC/Release/Chinese";
+
+    let Metadata_OS_PC_MOD  = Server_PC_OS + "/Patch/global-metadata-patched.dat";
+    let Metadata_CN_PC_MOD  = Server_PC_OS + "/Patch/global-metadata-patched.dat";
+    let Metadata_OS_PC_ORI2 = Server_PC_OS + "/Patch/global-metadata-original.dat";
+    let Metadata_CN_PC_ORI2 = Server_PC_OS + "/Patch/global-metadata-original.dat";
     
-    let DL_OS_Backup = Server_PC + version + "/Release/Global/" + DL_OS.substring(DL_OS.lastIndexOf("/") + 1);
-    let DL_CN_Backup = Server_PC + version + "/Release/Chinese/" + DL_CN.substring(DL_CN.lastIndexOf("/") + 1);
+    let DL_OS_Backup = Server_PC_OS + "/" + DL_OS.substring(DL_OS.lastIndexOf("/") + 1);
+    let DL_CN_Backup = Server_PC_CN + "/" + DL_CN.substring(DL_CN.lastIndexOf("/") + 1);
 
     let Metadata_OS_PC_ORI = Decompressed_OS + "/GenshinImpact_Data/Native/Data/Metadata/global-metadata.dat";
     let Metadata_CN_PC_ORI = Decompressed_CN + "/GenshinImpact_Data/Native/Data/Metadata/global-metadata.dat";
