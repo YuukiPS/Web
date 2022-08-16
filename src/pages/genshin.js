@@ -63,17 +63,24 @@ export default function Genshin() {
         }
     }
 
-    let Server_PC  = "https://file.yuuki.me/0:/Project/GenshinImpact/Data";
+    let Server_PC = "https://file.yuuki.me/0:/Project/GenshinImpact/Data/";
     let Server_PC2 = "https://drive.yuuki.me/share/ZOrLF1E5/GenshinImpact/Data/";
 
-    let Server_PC_OS=Server_PC + version + "/PC/Release/Global";
-    let Server_PC_CN=Server_PC + version + "/PC/Release/Chinese";
+    let Server_PC_OS = Server_PC + version + "/PC/Release/Global";
+    let Server_PC_CN = Server_PC + version + "/PC/Release/Chinese";
 
-    let Metadata_OS_PC_MOD  = Server_PC_OS + "/Patch/global-metadata-patched.dat";
-    let Metadata_CN_PC_MOD  = Server_PC_OS + "/Patch/global-metadata-patched.dat";
+    let Server_PC_OS2 = Server_PC2 + version + "/PC/Release/Global";
+    let Server_PC_CN2 = Server_PC2 + version + "/PC/Release/Chinese";
+
+    let Metadata_OS_PC_MOD = Server_PC_OS + "/Patch/global-metadata-patched.dat";
+    let Metadata_CN_PC_MOD = Server_PC_CN + "/Patch/global-metadata-patched.dat";
+
+    let Metadata_OS_PC_MOD2 = Server_PC_OS2 + "/Patch/global-metadata-patched.dat";
+    let Metadata_CN_PC_MOD2 = Server_PC_CN2 + "/Patch/global-metadata-patched.dat";
+
     let Metadata_OS_PC_ORI2 = Server_PC_OS + "/Patch/global-metadata-original.dat";
     let Metadata_CN_PC_ORI2 = Server_PC_OS + "/Patch/global-metadata-original.dat";
-    
+
     let DL_OS_Backup = Server_PC_OS + "/" + DL_OS.substring(DL_OS.lastIndexOf("/") + 1);
     let DL_CN_Backup = Server_PC_CN + "/" + DL_CN.substring(DL_CN.lastIndexOf("/") + 1);
 
@@ -83,19 +90,17 @@ export default function Genshin() {
     return (
         <>
             <Layout genshin>
-
                 <Head>
                     <title>
                         Download Genshin Impact {version} - {siteTitle}
                     </title>
                 </Head>
-                
+
                 <h1 class="title">Genshin Impact</h1>
                 <p class="description">Currently version {version}, download link below.</p>
 
-                <div class="grid">
-
-                    <h3 class="text-center py-3">Full Version (Original)</h3>
+                <div class="container mx-sm">
+                    <h3 class="text-center py-3">Full Version (DL: Server Original)</h3>
                     <div class="flex justify-center gap-2 py-3">
                         <a href={`${DL_OS}`} class="btn btn-wide">
                             Global
@@ -106,7 +111,7 @@ export default function Genshin() {
                         </a>
                     </div>
 
-                    <h3 class="text-center py-3">Full Version (Original Alternative)</h3>
+                    <h3 class="text-center py-3">Full Version (DL: Server CF)</h3>
                     <div class="flex justify-center gap-2 py-3">
                         <a href={`${DL_OS_Backup}`} class="btn btn-wide">
                             Global
@@ -117,7 +122,11 @@ export default function Genshin() {
                         </a>
                     </div>
 
-                    <h3 class="text-center py-3">Metadata (Patch)</h3>
+                    <h4 class="text-center py-3">
+                        We recommend using Cultivation/YuukiLauncher instead using manual methods patch.
+                    </h4>
+
+                    <h3 class="text-center py-3">Metadata Patch (DL: Server CF)</h3>
                     <div class="flex justify-center gap-2 py-3">
                         <a href={`${Metadata_OS_PC_MOD}`} class="btn btn-wide">
                             Global
@@ -128,7 +137,18 @@ export default function Genshin() {
                         </a>
                     </div>
 
-                    <h3 class="text-center py-3">Metadata (Original)</h3>
+                    <h3 class="text-center py-3">Metadata Patch (DL: Server Yuuki)</h3>
+                    <div class="flex justify-center gap-2 py-3">
+                        <a href={`${Metadata_OS_PC_MOD2}`} class="btn btn-wide">
+                            Global
+                        </a>
+
+                        <a href={`${Metadata_CN_PC_MOD2}`} class="btn btn-wide">
+                            China
+                        </a>
+                    </div>
+
+                    <h3 class="text-center py-3">Metadata (DL: Server Original)</h3>
                     <div class="flex justify-center gap-2 py-3">
                         <a href={`${Metadata_OS_PC_ORI}`} class="btn btn-wide">
                             Global
@@ -138,18 +158,6 @@ export default function Genshin() {
                             China
                         </a>
                     </div>
-
-                    <h3 class="text-center py-3">Metadata (Original Alternative)</h3>
-                    <div class="flex justify-center gap-2 py-3">
-                        <a href={`${Metadata_OS_PC_ORI2}`} class="btn btn-wide">
-                            Global
-                        </a>
-
-                        <a href={`${Metadata_CN_PC_ORI2}`} class="btn btn-wide">
-                            China
-                        </a>
-                    </div>
-
                 </div>
             </Layout>
         </>

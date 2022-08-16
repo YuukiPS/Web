@@ -3,8 +3,12 @@ import useSWR from "swr";
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function App({ server = "sg" }) {
-    const { data, error } = useSWR(`https://${server}.game.yuuki.me/status/server`, fetcher);
 
+    let url_server = `${server}.game.yuuki.me`; // TODO: move to *.*.ps.yuuki.me
+
+    const { data, error } = useSWR(`https://${url_server}/status/server`, fetcher);
+
+    // TODO: REMOVE THIS AND JUST USE API
     if (server == "sg") {
         server = "Singapore";
     }
@@ -44,6 +48,7 @@ export default function App({ server = "sg" }) {
             <div class="stat-title">Traveler</div>
             <div class="stat-value">{traveler}</div>
             <div class="stat-desc">
+                <div className="new-line">Address: {url_server}</div>
                 <div className="new-line">Version: {version}</div>
                 <div className="new-line">RAM: {ram}</div>
             </div>

@@ -22,9 +22,7 @@ export default function Home({ allPostsData }) {
                 <title>{siteTitle}</title>
             </Head>
 
-            <h1 class="title">Welcome to {siteTitle}</h1>
-
-            <p class="description">This site is still under developer. please check regularly</p>
+            <h1 class="title py-10">Welcome to {siteTitle}</h1>
 
             <div class="text-center py-3">
                 <div class="stats bg-primary text-primary-content">
@@ -35,15 +33,21 @@ export default function Home({ allPostsData }) {
             </div>
 
             <div class="grid">
-                <div class="flex justify-center gap-2 py-3">
-                    <a href="/command" class="btn btn-wide">
+                <div class="flex justify-center gap-2">
+                    <a href="/command" class="btn">
                         Web Command
                     </a>
 
-                    <a href="/genshin" class="btn btn-wide">
-                        Genshin Impact
+                    <a href="/genshin" class="btn">
+                        Download
+                    </a>
+
+                    <a href="https://github.com/akbaryahya/DockerGC" class="btn">
+                        Create Server
                     </a>
                 </div>
+
+                <h2 class="text-center">Latest News</h2>
 
                 <div class="flex justify-center gap-2 py-3">
                     {allPostsData.map(({ id, date, title, short }) => (
@@ -54,6 +58,7 @@ export default function Home({ allPostsData }) {
                         </a>
                     ))}
                 </div>
+
             </div>
         </Layout>
     );
