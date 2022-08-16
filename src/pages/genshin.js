@@ -63,26 +63,32 @@ export default function Genshin() {
         }
     }
 
-    let Server_PC = "https://file.yuuki.me/0:/Project/GenshinImpact/Data/";
-    let Server_PC2 = "https://drive.yuuki.me/share/ZOrLF1E5/GenshinImpact/Data/";
+    let Server1 = "https://file.yuuki.me/0:/Project/GenshinImpact/Data/";
+    let Server2 = "https://drive.yuuki.me/share/ZOrLF1E5/GenshinImpact/Data/";
 
-    let Server_PC_OS = Server_PC + version + "/PC/Release/Global";
-    let Server_PC_CN = Server_PC + version + "/PC/Release/Chinese";
+    let Server1_OS_PC = Server1 + version + "/PC/Release/Global";
+    let Server1_CN_PC = Server1 + version + "/PC/Release/Chinese";
+    let Server1_CN_AD = Server1 + version + "/Android/Release/Chinese";
+    let Server1_OS_AD = Server1 + version + "/Android/Release/Global";
 
-    let Server_PC_OS2 = Server_PC2 + version + "/PC/Release/Global";
-    let Server_PC_CN2 = Server_PC2 + version + "/PC/Release/Chinese";
+    let Server2_OS2 = Server2 + version + "/PC/Release/Global";
+    let Server2_CN2 = Server2 + version + "/PC/Release/Chinese";
 
-    let Metadata_OS_PC_MOD = Server_PC_OS + "/Patch/global-metadata-patched.dat";
-    let Metadata_CN_PC_MOD = Server_PC_CN + "/Patch/global-metadata-patched.dat";
+    let Metadata_OS_PC_MOD = Server1_OS_PC + "/Patch/global-metadata-patched.dat";
+    let Metadata_CN_PC_MOD = Server1_CN_PC + "/Patch/global-metadata-patched.dat";
 
-    let Metadata_OS_PC_MOD2 = Server_PC_OS2 + "/Patch/global-metadata-patched.dat";
-    let Metadata_CN_PC_MOD2 = Server_PC_CN2 + "/Patch/global-metadata-patched.dat";
+    let Metadata_OS_PC_MOD2 = Server2_OS2 + "/Patch/global-metadata-patched.dat";
+    let Metadata_CN_PC_MOD2 = Server2_CN2 + "/Patch/global-metadata-patched.dat";
 
-    let Metadata_OS_PC_ORI2 = Server_PC_OS + "/Patch/global-metadata-original.dat";
-    let Metadata_CN_PC_ORI2 = Server_PC_OS + "/Patch/global-metadata-original.dat";
+    let Metadata_OS_PC_ORI2 = Server1_OS_PC + "/Patch/global-metadata-original.dat";
+    let Metadata_CN_PC_ORI2 = Server1_CN_PC + "/Patch/global-metadata-original.dat";
 
-    let DL_OS_Backup = Server_PC_OS + "/" + DL_OS.substring(DL_OS.lastIndexOf("/") + 1);
-    let DL_CN_Backup = Server_PC_CN + "/" + DL_CN.substring(DL_CN.lastIndexOf("/") + 1);
+    let DL_OS_Backup = Server1_OS_PC + "/" + DL_OS.substring(DL_OS.lastIndexOf("/") + 1);
+    let DL_CN_Backup = Server1_CN_PC + "/" + DL_CN.substring(DL_CN.lastIndexOf("/") + 1);
+
+    // TODO: get version
+    let DL_OS_AD = Server1_OS_AD + "/YuukiPS.apk";
+    let DL_CN_AD = Server1_CN_AD + "/YuukiPS.apk";
 
     let Metadata_OS_PC_ORI = Decompressed_OS + "/GenshinImpact_Data/Native/Data/Metadata/global-metadata.dat";
     let Metadata_CN_PC_ORI = Decompressed_CN + "/GenshinImpact_Data/Native/Data/Metadata/global-metadata.dat";
@@ -100,7 +106,7 @@ export default function Genshin() {
                 <p class="description">Currently version {version}, download link below.</p>
 
                 <div class="container mx-sm">
-                    <h3 class="text-center py-3">Full Version (DL: Server Original)</h3>
+                    <h3 class="text-center py-3">PC Full Data (DL: Server Original)</h3>
                     <div class="flex justify-center gap-2 py-3">
                         <a href={`${DL_OS}`} class="btn btn-wide">
                             Global
@@ -111,13 +117,24 @@ export default function Genshin() {
                         </a>
                     </div>
 
-                    <h3 class="text-center py-3">Full Version (DL: Server CF)</h3>
+                    <h3 class="text-center py-3">PC Full Data (DL: Server CF)</h3>
                     <div class="flex justify-center gap-2 py-3">
                         <a href={`${DL_OS_Backup}`} class="btn btn-wide">
                             Global
                         </a>
 
                         <a href={`${DL_CN_Backup}`} class="btn btn-wide">
+                            China
+                        </a>
+                    </div>
+
+                    <h3 class="text-center py-3">Android Launcher Mod No-Root (DL: Server CF)</h3>
+                    <div class="flex justify-center gap-2 py-3">
+                        <a href={`${DL_OS_AD}`} class="btn btn-wide">
+                            Global
+                        </a>
+
+                        <a href={`${DL_CN_AD}`} class="btn btn-wide">
                             China
                         </a>
                     </div>
