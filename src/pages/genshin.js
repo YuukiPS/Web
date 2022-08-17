@@ -5,7 +5,7 @@ import useSWR from "swr";
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 function getLatest(region = "os") {
-    return useSWR(`api/latest/${region}`, fetcher).data;
+    return useSWR(`api/genshin/download/latest/${region}`, fetcher).data;
 }
 
 export default function Genshin() {
