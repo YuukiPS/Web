@@ -31,11 +31,11 @@ export default function handler(req, res) {
                         ann_id: 2,
                         title: "Halaman Preview Versi 3.0 \"Fajar Seribu Mawar\" Resmi Dibuka!",
                         subtitle: "Preview Genshin Impact v3.0",
-                        banner: "https://sdk.hoyoverse.com/upload/announcement/2022/08/11/66fd2baedcff08f23602f60beef64956_4829249710167576256.jpg",
+                        banner: "https://gitlab.com/yukiz/grasscutter-data/-/raw/main/data/hk4e/announcement/image/banner2.jpg",
                         content: "",
                         type_label: "System",
                         tag_label: "2",
-                        tag_icon: "https://sdk.hoyoverse.com/upload/announcement/2020/03/05/f3016cc0dbe3f9c2305566742ae5927f_1830032474842461374.png",
+                        tag_icon: "ttps://gitlab.com/yukiz/grasscutter-data/-/raw/main/data/hk4e/announcement/image/alert/warning.png",
                         login_alert: 1,
                         lang: "en-US",
                         start_time: "2022-08-14 12:00:00",
@@ -47,7 +47,7 @@ export default function handler(req, res) {
                         tag_end_time: "2030-01-02 15:04:05",
                         remind_ver: 1,
                         has_content: true,
-                        extra_remind: 0
+                        extra_remind: 1
                       },
                 ],
                 type_id: 2,
