@@ -35,7 +35,7 @@ export default function handler(req, res) {
                         content: "",
                         type_label: "System",
                         tag_label: "2",
-                        tag_icon: "ttps://gitlab.com/yukiz/grasscutter-data/-/raw/main/data/hk4e/announcement/image/alert/warning.png",
+                        tag_icon: "https://gitlab.com/yukiz/grasscutter-data/-/raw/main/data/hk4e/announcement/image/alert/warning.png",
                         login_alert: 1,
                         lang: "en-US",
                         start_time: "2022-08-14 12:00:00",
