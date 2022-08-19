@@ -8,7 +8,28 @@ export default function Command() {
         if (event.target.className == "btn") {
             //var newtext = document.melon.cmd.value;
             let name_cmd = event.target.innerHTML;
-            //console.log(name_cmd);
+            if (name_cmd == "starterpack") {
+                document.melon.cmd.value = "";
+                name_cmd = `
+                give all                
+                give 102 999999
+                give 201 9999
+                give 202 99999
+                give 203 1000
+                give 204 1000
+                give 223 1000
+                give 224 1000
+                prop ue 1
+                prop nostamina 1
+                prop godmode 1
+                prop abyss 12
+                prop bplevel 50 
+                prop worldlevel 8
+                prop unlockmap on
+                unlockall
+                `;
+            }
+            name_cmd = name_cmd.replace(/^\s+|\s+$|\s+(?=\s)/g, "\r\n");
             document.melon.cmd.value += name_cmd + "\r\n";
         }
     };
@@ -147,8 +168,8 @@ export default function Command() {
                             <h3>Basic Command</h3>
 
                             <div class="flex flex-wrap gap-2 getcmd" onClick={bt}>
+                                <a class="btn">starterpack</a>
                                 <a class="btn">give</a>
-                                <a class="btn">give all</a>
                                 <a class="btn">spawn 1 10 10</a>
                                 <a class="btn">killall</a>
                                 <a class="btn">killCharacter</a>
