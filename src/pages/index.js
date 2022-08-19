@@ -18,6 +18,7 @@ export async function getStaticProps() {
 export default function Home({ allPostsData }) {
     return (
         <Layout home>
+            
             <Head>
                 <title>{siteTitle}</title>
             </Head>
@@ -42,7 +43,7 @@ export default function Home({ allPostsData }) {
                         Download
                     </a>
 
-                    <a href="https://github.com/akbaryahya/DockerGC" class="btn">
+                    <a href="https://github.com/akbaryahya/DockerGC" target="_blank" rel="sponsored" class="btn">
                         Create Server
                     </a>
                 </div>

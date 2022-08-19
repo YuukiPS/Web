@@ -2,6 +2,19 @@ import Layout, { siteTitle } from "../components/layout";
 import Head from "next/head";
 
 export default function Command() {
+    const isEmpty = (value) => value === null || value === "";
+    const bt = (event) => {
+        //console.log(event);
+        if (event.target.className == "btn") {
+            //var newtext = document.melon.cmd.value;
+            let name_cmd = event.target.innerHTML;
+            //console.log(name_cmd);
+            document.melon.cmd.value += name_cmd + "\r\n";
+        }
+    };
+    const clear = (event) => {
+        document.melon.cmd.value = "";
+    };
     // Handles submit event on form submit.
     const run = async (event) => {
         // Stop the form from submitting and refreshing the page.
@@ -18,6 +31,9 @@ export default function Command() {
         // list cmd
         for (let i = 0; i < total_cmd; i++) {
             const cmdp = cmd_line[i].replace("/", "").replace("!", "");
+            if (isEmpty(cmdp)) {
+                continue;
+            }
 
             const endpoint =
                 "https://" +
@@ -52,14 +68,14 @@ export default function Command() {
         <>
             <Layout command>
                 <Head>
-                    <title>Command - {siteTitle}</title>
+                    <title>Command Web - {siteTitle}</title>
                 </Head>
 
-                <h1 class="title">Command YuukiPS (Beta)</h1>
+                <h1 class="title">Command Web</h1>
 
-                <p class="description">Access commands from web</p>
+                <p class="description">Access command from web</p>
 
-                <form onSubmit={run}>
+                <form name="melon" onSubmit={run}>
                     <div class="card">
                         <div class="card-body">
                             <div id="info"></div>
@@ -119,10 +135,60 @@ export default function Command() {
                                 />
                             </div>
 
-                            <div class="form-control mt-6">
+                            <div class="form-control gap-2 mt-6">
                                 <button class="btn btn-primary" type="submit">
                                     Command
                                 </button>
+                                <a class="btn btn-primary" onClick={clear}>
+                                    Clear
+                                </a>
+                            </div>
+
+                            <h3>Basic Command</h3>
+
+                            <div class="flex flex-wrap gap-2 getcmd" onClick={bt}>
+                                <a class="btn">give</a>
+                                <a class="btn">give all</a>
+                                <a class="btn">spawn 1 10 10</a>
+                                <a class="btn">killall</a>
+                                <a class="btn">killCharacter</a>
+                                <a class="btn">clear</a>
+                                <a class="btn">coop</a>
+                                <a class="btn">enka</a>
+                                <a class="btn">enter_dungeon</a>
+                                <a class="btn">equip</a>
+                                <a class="btn">heal</a>
+                                <a class="btn">language</a>
+                                <a class="btn">list</a>
+                                <a class="btn">position</a>
+                                <a class="btn">quest</a>
+                                <a class="btn">resetConst</a>
+                                <a class="btn">resetShopLimit</a>
+                                <a class="btn">setConst</a>
+                                <a class="btn">setFetterLevel</a>
+                                <a class="btn">setProp</a>
+                                <a class="btn">setStats</a>
+                                <a class="btn">talent</a>
+                                <a class="btn">team</a>
+                                <a class="btn">teleport</a>
+                                <a class="btn">teleportAll</a>
+                                <a class="btn">unlockall</a>
+                                <a class="btn">weather</a>
+                            </div>
+
+                            <h3>Server Command</h3>
+
+                            <div class="flex flex-wrap gap-2 getcmd" onClick={bt}>
+                                <a class="btn">account</a>
+                                <a class="btn">announce</a>
+                                <a class="btn">ban</a>
+                                <a class="btn">unban</a>
+                                <a class="btn">stop</a>
+                                <a class="btn">kick</a>
+                                <a class="btn">permission</a>
+                                <a class="btn">reload</a>
+                                <a class="btn">sendMail</a>
+                                <a class="btn">sendMessage</a>
                             </div>
                         </div>
                     </div>
