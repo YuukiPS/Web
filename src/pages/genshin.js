@@ -63,14 +63,18 @@ export default function Genshin() {
         }
     }
 
+    // TODO: get api
+    let Launcher_PC = "https://github.com/akbaryahya/YuukiLauncher/releases";
+    let Launcher_PC2 = "https://github.com/Grasscutters/Cultivation/releases";
+
     // Server CloudFlare
     let Server1 = "https://file.yuuki.me/0:/Project/GenshinImpact/Data";
 
-    let Server1_OS_PC = Server1 +"/PC/"+ version + "/Release/Global";
-    let Server1_CN_PC = Server1 +"/PC/"+ version + "/Release/Chinese";
-    
-    let Server1_CN_AD = Server1 +"/Android/"+ version + "/Release/Chinese";
-    let Server1_OS_AD = Server1 +"/Android/"+ version + "/Release/Global";
+    let Server1_OS_PC = Server1 + "/PC/" + version + "/Release/Global";
+    let Server1_CN_PC = Server1 + "/PC/" + version + "/Release/Chinese";
+
+    let Server1_CN_AD = Server1 + "/Android/" + version + "/Release/Chinese";
+    let Server1_OS_AD = Server1 + "/Android/" + version + "/Release/Global";
 
     let Metadata_OS_PC_MOD = Server1_OS_PC + "/Patch/global-metadata-patched.dat";
     let Metadata_CN_PC_MOD = Server1_CN_PC + "/Patch/global-metadata-patched.dat";
@@ -83,16 +87,22 @@ export default function Genshin() {
     let DL_CN_AD = Server1_CN_AD + "/YuukiPS.apk";
 
     // Server Yuuki
-    let Server2 = "https://drive.yuuki.me/share/ZOrLF1E5/GenshinImpact/Data";
+    let Server2 = "https://drive.yuuki.me/api/public/dl/ZOrLF1E5/GenshinImpact/Data";
 
-    let Server2_OS2 = Server2 +"/PC/"+ version + "/Release/Global";
-    let Server2_CN2 = Server2 +"/PC/"+ version + "/Release/Chinese";
+    let Server2_OS2 = Server2 + "/PC/" + version + "/Release/Global";
+    let Server2_CN2 = Server2 + "/PC/" + version + "/Release/Chinese";
+
+    let Server2_CN_AD = Server2 + "/Android/" + version + "/Release/Chinese";
+    let Server2_OS_AD = Server2 + "/Android/" + version + "/Release/Global";
+
+    let DL_OS_AD2 = Server2_OS_AD + "/YuukiPS.apk";
+    let DL_CN_AD2 = Server2_CN_AD + "/YuukiPS.apk";
 
     let Metadata_OS_PC_MOD2 = Server2_OS2 + "/Patch/global-metadata-patched.dat";
     let Metadata_CN_PC_MOD2 = Server2_CN2 + "/Patch/global-metadata-patched.dat";
 
     let DL_OS_Backup = Server1_OS_PC + "/" + DL_OS.substring(DL_OS.lastIndexOf("/") + 1);
-    let DL_CN_Backup = Server1_CN_PC + "/" + DL_CN.substring(DL_CN.lastIndexOf("/") + 1);    
+    let DL_CN_Backup = Server1_CN_PC + "/" + DL_CN.substring(DL_CN.lastIndexOf("/") + 1);
 
     // Server Official
     let Metadata_OS_PC_ORI = Decompressed_OS + "/GenshinImpact_Data/Native/Data/Metadata/global-metadata.dat";
@@ -133,6 +143,28 @@ export default function Genshin() {
                         </a>
                     </div>
 
+                    <h3 class="text-center py-3">PC Launcher</h3>
+                    <div class="flex justify-center gap-2 py-3">
+                        <a href={`${Launcher_PC2}`} class="btn btn-wide">
+                            Cultivation
+                        </a>
+
+                        <a href={`${Launcher_PC}`} class="btn btn-wide">
+                            YuukiLauncher
+                        </a>
+                    </div>
+
+                    <h3 class="text-center py-3">Android Launcher Mod No-Root (DL: Server Yuuki)</h3>
+                    <div class="flex justify-center gap-2 py-3">
+                        <a href={`${DL_OS_AD2}`} class="btn btn-wide">
+                            Global
+                        </a>
+
+                        <a href={`${DL_CN_AD2}`} class="btn btn-wide">
+                            China
+                        </a>
+                    </div>
+
                     <h3 class="text-center py-3">Android Launcher Mod No-Root (DL: Server CF)</h3>
                     <div class="flex justify-center gap-2 py-3">
                         <a href={`${DL_OS_AD}`} class="btn btn-wide">
@@ -148,17 +180,6 @@ export default function Genshin() {
                         We recommend using Cultivation/YuukiLauncher instead using manual methods patch.
                     </h4>
 
-                    <h3 class="text-center py-3">Metadata Patch (DL: Server CF)</h3>
-                    <div class="flex justify-center gap-2 py-3">
-                        <a href={`${Metadata_OS_PC_MOD}`} class="btn btn-wide">
-                            Global
-                        </a>
-
-                        <a href={`${Metadata_CN_PC_MOD}`} class="btn btn-wide">
-                            China
-                        </a>
-                    </div>
-
                     <h3 class="text-center py-3">Metadata Patch (DL: Server Yuuki)</h3>
                     <div class="flex justify-center gap-2 py-3">
                         <a href={`${Metadata_OS_PC_MOD2}`} class="btn btn-wide">
@@ -170,6 +191,17 @@ export default function Genshin() {
                         </a>
                     </div>
 
+                    <h3 class="text-center py-3">Metadata Patch (DL: Server CF)</h3>
+                    <div class="flex justify-center gap-2 py-3">
+                        <a href={`${Metadata_OS_PC_MOD}`} class="btn btn-wide">
+                            Global
+                        </a>
+
+                        <a href={`${Metadata_CN_PC_MOD}`} class="btn btn-wide">
+                            China
+                        </a>
+                    </div>         
+
                     <h3 class="text-center py-3">Metadata (DL: Server Original)</h3>
                     <div class="flex justify-center gap-2 py-3">
                         <a href={`${Metadata_OS_PC_ORI}`} class="btn btn-wide">
@@ -180,6 +212,18 @@ export default function Genshin() {
                             China
                         </a>
                     </div>
+
+                    <p class="description">
+                        <div className="new-line">
+                            For downloading game data, we recommend always using original server instead Server CF
+                            because it has a rate limit from Google Drive. and to download Launcher Mod use Yuuki
+                            Server.
+                        </div>
+                        <div className="new-line">
+                            Some links are also not available if that happens please wait for a few hours or contact
+                            admin.
+                        </div>
+                    </p>
                 </div>
             </Layout>
         </>
