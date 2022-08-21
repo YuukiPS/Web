@@ -1,5 +1,5 @@
 export default function handler(req, res) {
-    // TODO: use news later
+    // TODO: Use Announcement API
     res.status(200).json({
         list: [
             {

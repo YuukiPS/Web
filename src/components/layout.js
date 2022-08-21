@@ -30,8 +30,7 @@ export default function Layout({ children, home }) {
                     <p>
                         <a href="https://discord.gg/tRYMG7Nm2D" target="_blank" rel="sponsored">
                             <img
-                                src="https://discordapp.com/api/guilds/964119462188040202/widget.png?style=banner2"
-                                alt="DockerGC"
+                                src="https://discordapp.com/api/guilds/964119462188040202/widget.png?style=banner2" alt="DockerGS"
                             ></img>
                         </a>
                     </p>

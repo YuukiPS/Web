@@ -18,7 +18,6 @@ export async function getStaticProps() {
 export default function Home({ allPostsData }) {
     return (
         <Layout home>
-            
             <Head>
                 <title>{siteTitle}</title>
             </Head>
@@ -40,7 +39,11 @@ export default function Home({ allPostsData }) {
                     </a>
 
                     <a href="/genshin" class="btn">
-                        Download
+                        Genshin Impact
+                    </a>
+
+                    <a href="/starrail" class="btn">
+                        Star Rail
                     </a>
 
                     <a href="https://github.com/akbaryahya/DockerGC" target="_blank" rel="sponsored" class="btn">
@@ -48,7 +51,7 @@ export default function Home({ allPostsData }) {
                     </a>
                 </div>
 
-                <h2 class="text-center">Latest News</h2>
+                <h2 class="text-center">Latest Announcement</h2>
 
                 <div class="flex justify-center gap-2 py-3">
                     {allPostsData.map(({ id, date, title, short }) => (
