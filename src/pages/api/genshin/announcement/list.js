@@ -1,7 +1,4 @@
-import { getAnnouncementData } from "../../../../lib/announcement";
-
 export default async function handler(req, res) {
-    const allPostsData = await getAnnouncementData();
     res.status(200).json({
         list: [
             {
@@ -63,7 +60,7 @@ export default async function handler(req, res) {
                 type_label: "Event",
             },
         ],
-        total: allPostsData.length,
+        total: 2,
         type_list: [
             { id: 2, name: "游戏系统公告", mi18n_name: "Game" },
             { id: 1, name: "活动公告", mi18n_name: "Event" },
