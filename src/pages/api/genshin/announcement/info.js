@@ -1,10 +1,12 @@
-import { getAnnouncementData } from "../../../../lib/announcement";
+import { getPostData } from "../../../../lib/post";
 
 export default async function handler(req, res) {
-    const allPostsData = await getAnnouncementData();
+    // All details info should be put here 
+    const GetNews = await getPostData();    
+    const time_ms = Date.now().toString();
     res.status(200).json({
-        t: Date.now(),
-        list: allPostsData,
-        total: allPostsData.length,
+        t: time_ms,
+        list: GetNews,
+        total: GetNews.length,
     });
 }
