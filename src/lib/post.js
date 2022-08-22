@@ -55,9 +55,11 @@ export async function getPostData(detail = true, category = "Genshin Impact") {
         let remind_ver=1;
         let has_content=true;
         let extra_remind=0;
+        let date="";
 
         // vaild check
         if (matterResult.data) {
+            date = matterResult.data.date;
             title = matterResult.data.title;
             subtitle = matterResult.data.subtitle;
             banner = matterResult.data.banner;
@@ -93,6 +95,7 @@ export async function getPostData(detail = true, category = "Genshin Impact") {
                 banner,
                 content,
                 lang,
+                date
             };
         } else {
             const content = "";
@@ -116,7 +119,8 @@ export async function getPostData(detail = true, category = "Genshin Impact") {
                 tag_end_time,
                 remind_ver,
                 has_content,
-                extra_remind
+                extra_remind,
+                date
 
             };
         }
