@@ -20,7 +20,6 @@ class Handlers
             //oS.oRequest.headers.UriScheme = "http";
               oS.host = "eu.genshin.ps.yuuki.me";
             //oS.host = "sg.genshin.ps.yuuki.me";
-            //oS.host = "tes.genshin.ps.yuuki.me";
 			//oS.host = "localhost";
             //oS.host = "2.0.0.100";
         }

@@ -28,7 +28,6 @@ export default function Home({ allPostsData }) {
                 <div class="stats bg-primary text-primary-content">
                     <Online server="sg" />
                     <Online server="eu" />
-                    <Online server="tes" />
                 </div>
             </div>
 

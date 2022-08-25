@@ -15,9 +15,6 @@ export default function App({ server = "sg" }) {
     if (server == "eu") {
         server = "Dusseldorf";
     }
-    if (server == "tes") {
-        server = "Beta Testing";
-    }
 
     var online = "Nobody";
     var version = "Unknown";
