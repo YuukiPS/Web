@@ -127,7 +127,7 @@ export default function Genshin() {
 
     // Server Official
     let Metadata_OS_PC_ORI = Decompressed_OS + "/GenshinImpact_Data/Native/Data/Metadata/global-metadata.dat";
-    let Metadata_CN_PC_ORI = Decompressed_CN + "/GenshinImpact_Data/Native/Data/Metadata/global-metadata.dat";
+    let Metadata_CN_PC_ORI = Decompressed_CN + "/YuanShen_Data/Native/Data/Metadata/global-metadata.dat";
 
     return (
         <>
