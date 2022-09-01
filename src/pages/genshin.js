@@ -1,16 +1,30 @@
 import Layout, { siteTitle } from "../components/layout";
 import Head from "next/head";
-import useSWR from "swr";
+import useSWR, { SWRConfig } from "swr";
 
-const fetcher = (...args) => fetch(...args).then((res) => res.json());
+const fetcher = (url) => fetch(url).then((res) => res.json());
 
-function getLatest(region = "os") {
-    return useSWR(`api/genshin/download/latest/${region}`, fetcher).data;
+const API_OS = "https://ps.yuuki.me/api/genshin/download/latest/os";
+const API_CN = "https://ps.yuuki.me/api/genshin/download/latest/cn";
+
+// https://swr.vercel.app/examples/ssr
+export async function getServerSideProps() {
+    const repoInfo_OS = await fetcher(API_OS);
+    const repoInfo_CN = await fetcher(API_CN);
+    return {
+        props: {
+            fallback: {
+                [API_OS]: repoInfo_OS,
+                [API_CN]: repoInfo_CN
+            }
+        }
+    };
 }
 
-export default function Genshin() {
-    const raw_os = getLatest("os");
-    const raw_cn = getLatest("cn");
+function Genshin() {
+
+    const raw_os = useSWR(API_OS).data;
+    const raw_cn = useSWR(API_CN).data;
 
     console.log(raw_os);
 
@@ -22,7 +36,7 @@ export default function Genshin() {
     let Decompressed_CN = "#";
     let get_os;
     let get_cn;
-    let IsPre="";
+    let IsPre = "";
 
     // for OS
     if (raw_os) {
@@ -30,10 +44,10 @@ export default function Genshin() {
 
             // check pre
             if (raw_os.data.pre_download_game) {
-                get_os=raw_os.data.pre_download_game;
-                IsPre="(Preload)";
-            }else{
-                get_os=raw_os.data.game;
+                get_os = raw_os.data.pre_download_game;
+                IsPre = "(Preload)";
+            } else {
+                get_os = raw_os.data.game;
             }
 
             if (get_os) {
@@ -62,10 +76,10 @@ export default function Genshin() {
 
             // check pre
             if (raw_cn.data.pre_download_game) {
-                get_cn=raw_cn.data.pre_download_game;
-                IsPre="(Preload)";
-            }else{
-                get_cn=raw_cn.data.game;
+                get_cn = raw_cn.data.pre_download_game;
+                IsPre = "(Preload)";
+            } else {
+                get_cn = raw_cn.data.game;
             }
 
             if (get_cn) {
@@ -221,7 +235,7 @@ export default function Genshin() {
                         <a href={`${Metadata_CN_PC_MOD}`} class="btn btn-wide">
                             China
                         </a>
-                    </div>         
+                    </div>
 
                     <h3 class="text-center py-3">Metadata (DL: Server Original)</h3>
                     <div class="flex justify-center gap-2 py-3">
@@ -248,5 +262,13 @@ export default function Genshin() {
                 </div>
             </Layout>
         </>
+    );
+}
+
+export default function App({ fallback }) {
+    return (
+        <SWRConfig value={{ fallback }}>
+            <Genshin />
+        </SWRConfig>
     );
 }

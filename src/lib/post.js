@@ -7,15 +7,15 @@ import html from "remark-html";
 export async function getPostData(detail = true, category = "Genshin Impact") {
 
     // Get folder by category
-    const PostDirectory = path.join(process.cwd(), "post"+"/"+category);
+    const PostDirectory = path.join(process.cwd(), "post" + "/" + category);
 
-    // Get file names under /posts
+    // Get file names under /post
     const getlist = fs.readdirSync(PostDirectory);
 
     let ann_id = 0;
 
     const allData = getlist.map(async (fileName) => {
-        
+
         // Remove ".md" from file name to get seo url
         const url = fileName.replace(/\.md$/, "");
 
@@ -38,24 +38,24 @@ export async function getPostData(detail = true, category = "Genshin Impact") {
         let subtitle = "";
         let banner = "";
         let content = ""; // list blank
-        let lang=""; // list too       
+        let lang = ""; // list too       
 
         // for list
-        let type_label="Announcement";
-        let tag_label="2";
-        let tag_icon=""; // icon
-        let login_alert=1;
-        let start_time="2022-07-15 17:00:00";
-        let end_time="2022-08-23 23:59:59";
-        let type="2";
-        let remind=1;
-        let alert=0;
-        let tag_start_time="";
-        let tag_end_time="";
-        let remind_ver=1;
-        let has_content=true;
-        let extra_remind=0;
-        let date="";
+        let type_label = "Announcement";
+        let tag_label = "2";
+        let tag_icon = ""; // icon
+        let login_alert = 1;
+        let start_time = "2022-07-15 17:00:00";
+        let end_time = "2022-08-23 23:59:59";
+        let type = "2";
+        let remind = 1;
+        let alert = 0;
+        let tag_start_time = "";
+        let tag_end_time = "";
+        let remind_ver = 1;
+        let has_content = true;
+        let extra_remind = 0;
+        let date = "";
 
         // vaild check
         if (matterResult.data) {
@@ -130,7 +130,7 @@ export async function getPostData(detail = true, category = "Genshin Impact") {
     // wait get data
     const results = await Promise.all(allData);
 
-    // Sort posts by date
+    // Sort post by date
     return results
         .filter((x) => x !== null)
         .sort((a, b) => {
