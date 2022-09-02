@@ -26,7 +26,7 @@ function Genshin() {
     const raw_os = useSWR(API_OS).data;
     const raw_cn = useSWR(API_CN).data;
 
-    console.log(raw_os);
+    //console.log(raw_os);
 
     let version = "Unknown";
 
@@ -147,108 +147,106 @@ function Genshin() {
         <>
             <Layout genshin>
                 <Head>
-                    <title>
-                        Download Genshin Impact {version} - {siteTitle}
-                    </title>
+                    <title>{"Download Genshin Impact " + version + " - " + siteTitle}</title>
                 </Head>
 
-                <h1 class="title">Genshin Impact</h1>
-                <p class="description">Currently version {version} {IsPre}, download link below.</p>
+                <h1 className="title">Genshin Impact</h1>
+                <div className="description">Currently version {version} {IsPre}, download link below.</div>
 
-                <div class="container mx-sm">
-                    <h3 class="text-center py-3">PC Full Data (DL: Server Original)</h3>
-                    <div class="flex justify-center gap-2 py-3">
-                        <a href={`${DL_OS}`} class="btn btn-wide">
+                <div className="container mx-sm">
+                    <h3 className="text-center py-3">PC Full Data (DL: Server Original)</h3>
+                    <div className="flex justify-center gap-2 py-3">
+                        <a href={`${DL_OS}`} className="btn btn-wide">
                             Global
                         </a>
 
-                        <a href={`${DL_CN}`} class="btn btn-wide">
+                        <a href={`${DL_CN}`} className="btn btn-wide">
                             China
                         </a>
                     </div>
 
-                    <h3 class="text-center py-3">PC Full Data (DL: Server CF)</h3>
-                    <div class="flex justify-center gap-2 py-3">
-                        <a href={`${DL_OS_Backup}`} class="btn btn-wide">
+                    <h3 className="text-center py-3">PC Full Data (DL: Server CF)</h3>
+                    <div className="flex justify-center gap-2 py-3">
+                        <a href={`${DL_OS_Backup}`} className="btn btn-wide">
                             Global
                         </a>
 
-                        <a href={`${DL_CN_Backup}`} class="btn btn-wide">
+                        <a href={`${DL_CN_Backup}`} className="btn btn-wide">
                             China
                         </a>
                     </div>
 
-                    <h3 class="text-center py-3">PC Launcher</h3>
-                    <div class="flex justify-center gap-2 py-3">
-                        <a href={`${Launcher_PC2}`} class="btn btn-wide">
+                    <h3 className="text-center py-3">PC Launcher</h3>
+                    <div className="flex justify-center gap-2 py-3">
+                        <a href={`${Launcher_PC2}`} className="btn btn-wide">
                             Cultivation
                         </a>
 
-                        <a href={`${Launcher_PC}`} class="btn btn-wide">
+                        <a href={`${Launcher_PC}`} className="btn btn-wide">
                             YuukiLauncher
                         </a>
                     </div>
 
-                    <h3 class="text-center py-3">Android Launcher Mod No-Root (DL: Server Yuuki)</h3>
-                    <div class="flex justify-center gap-2 py-3">
-                        <a href={`${DL_OS_AD2}`} class="btn btn-wide">
+                    <h3 className="text-center py-3">Android Launcher Mod No-Root (DL: Server Yuuki)</h3>
+                    <div className="flex justify-center gap-2 py-3">
+                        <a href={`${DL_OS_AD2}`} className="btn btn-wide">
                             Global
                         </a>
 
-                        <a href={`${DL_CN_AD2}`} class="btn btn-wide">
+                        <a href={`${DL_CN_AD2}`} className="btn btn-wide">
                             China
                         </a>
                     </div>
 
-                    <h3 class="text-center py-3">Android Launcher Mod No-Root (DL: Server CF)</h3>
-                    <div class="flex justify-center gap-2 py-3">
-                        <a href={`${DL_OS_AD}`} class="btn btn-wide">
+                    <h3 className="text-center py-3">Android Launcher Mod No-Root (DL: Server CF)</h3>
+                    <div className="flex justify-center gap-2 py-3">
+                        <a href={`${DL_OS_AD}`} className="btn btn-wide">
                             Global
                         </a>
 
-                        <a href={`${DL_CN_AD}`} class="btn btn-wide">
+                        <a href={`${DL_CN_AD}`} className="btn btn-wide">
                             China
                         </a>
                     </div>
 
-                    <h4 class="text-center py-3">
+                    <h4 className="text-center py-3">
                         We recommend using Cultivation/YuukiLauncher instead using manual methods patch.
                     </h4>
 
-                    <h3 class="text-center py-3">Metadata Patch (DL: Server Yuuki)</h3>
-                    <div class="flex justify-center gap-2 py-3">
-                        <a href={`${Metadata_OS_PC_MOD2}`} class="btn btn-wide">
+                    <h3 className="text-center py-3">Metadata Patch (DL: Server Yuuki)</h3>
+                    <div className="flex justify-center gap-2 py-3">
+                        <a href={`${Metadata_OS_PC_MOD2}`} className="btn btn-wide">
                             Global
                         </a>
 
-                        <a href={`${Metadata_CN_PC_MOD2}`} class="btn btn-wide">
+                        <a href={`${Metadata_CN_PC_MOD2}`} className="btn btn-wide">
                             China
                         </a>
                     </div>
 
-                    <h3 class="text-center py-3">Metadata Patch (DL: Server CF)</h3>
-                    <div class="flex justify-center gap-2 py-3">
-                        <a href={`${Metadata_OS_PC_MOD}`} class="btn btn-wide">
+                    <h3 className="text-center py-3">Metadata Patch (DL: Server CF)</h3>
+                    <div className="flex justify-center gap-2 py-3">
+                        <a href={`${Metadata_OS_PC_MOD}`} className="btn btn-wide">
                             Global
                         </a>
 
-                        <a href={`${Metadata_CN_PC_MOD}`} class="btn btn-wide">
+                        <a href={`${Metadata_CN_PC_MOD}`} className="btn btn-wide">
                             China
                         </a>
                     </div>
 
-                    <h3 class="text-center py-3">Metadata (DL: Server Original)</h3>
-                    <div class="flex justify-center gap-2 py-3">
-                        <a href={`${Metadata_OS_PC_ORI}`} class="btn btn-wide">
+                    <h3 className="text-center py-3">Metadata (DL: Server Original)</h3>
+                    <div className="flex justify-center gap-2 py-3">
+                        <a href={`${Metadata_OS_PC_ORI}`} className="btn btn-wide">
                             Global
                         </a>
 
-                        <a href={`${Metadata_CN_PC_ORI}`} class="btn btn-wide">
+                        <a href={`${Metadata_CN_PC_ORI}`} className="btn btn-wide">
                             China
                         </a>
                     </div>
 
-                    <p class="description">
+                    <div className="description">
                         <div className="new-line">
                             For downloading game data, we recommend always using original server instead Server CF
                             because it has a rate limit from Google Drive. and to download Launcher Mod use Yuuki
@@ -258,7 +256,8 @@ function Genshin() {
                             Some links are also not available if that happens please wait for a few hours or contact
                             admin.
                         </div>
-                    </p>
+                    </div>
+
                 </div>
             </Layout>
         </>
