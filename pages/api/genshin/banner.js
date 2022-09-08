@@ -646,9 +646,7 @@ export default function handler(req, res) {
                 [80, 10000],
             ],
         },
-        /*
-          Banner 2.7 #2
-        */
+        // Banner 2.7 #2
         {
             gachaType: 301,
             scheduleId: 137,
@@ -698,9 +696,7 @@ export default function handler(req, res) {
             eventChance4: 75,
             eventChance5: 75,
         },
-        /*
-          Banner 2.8
-        */
+        // Banner 2.8
         {
             comment: "Character Event Banner 1",
             comment5: "5 stars: Kaedehara Kazuha",
@@ -778,9 +774,7 @@ export default function handler(req, res) {
             eventChance4: 75,
             eventChance5: 75,
         },
-        /*
-          Banner 2.8 #2
-        */
+        // Banner 2.8 #2
         {
             gachaType: 400,
             scheduleId: 142,
@@ -810,11 +804,8 @@ export default function handler(req, res) {
             eventChance4: 75,
             eventChance5: 75,
         },
-        /*
-        Banner 3.0
-         */
+        // Banner 3.0
         {
-            important: true,
             comment: "Character Event Banner 1",
             comment5: "5 stars: Tighnari",
             comment4: "4 stars: Collei, Diona and Fischl",
@@ -837,7 +828,6 @@ export default function handler(req, res) {
             ],
         },
         {
-            important: true,
             comment: "Character Event Banner 2",
             comment5: "5 stars: Zhongli",
             comment4: "4 stars: Collei, Diona and Fischl",
@@ -861,7 +851,6 @@ export default function handler(req, res) {
             ],
         },
         {
-            important: true,
             comment: "Weapon Event Banner",
             comment5: "5 stars: Hunter's Path, Vortex Vanquisher",
             comment4: "4 stars: The Stringless, Favonius Sword, Favonius Lance, Favonius Codex, The Bell",
@@ -877,6 +866,87 @@ export default function handler(req, res) {
             sortId: 9997,
             rateUpItems4: [15402, 11401, 13407, 14401, 12402],
             rateUpItems5: [15511, 13504],
+            fallbackItems5Pool1: [],
+            weights4: [
+                [1, 600],
+                [7, 600],
+                [8, 6600],
+                [10, 12600],
+            ],
+            weights5: [
+                [1, 100],
+                [62, 100],
+                [73, 7800],
+                [80, 10000],
+            ],
+            eventChance4: 75,
+            eventChance5: 75,
+        },
+        // Banner 3.0 #2
+        {
+            important: true,
+            comment: "Character Event Banner 1",
+            comment5: "5 stars: Ganyu",
+            comment4: "4 stars: Dori,Xingqiu and Sucrose",
+            gachaType: 301,
+            scheduleId: 903,
+            bannerType: "EVENT",
+            prefabPath: "GachaShowPanel_A094",
+            previewPrefabPath: "UI_Tab_GachaShowPanel_A094",
+            titlePath: "UI_GACHA_SHOW_PANEL_A094_TITLE",
+            costItemId: 223,
+            beginTime: 0,
+            endTime: 1664272800,
+            sortId: 9998,
+            rateUpItems4: [1068, 1025, 1043],
+            rateUpItems5: [1037],
+            weights5: [
+                [1, 80],
+                [73, 80],
+                [90, 10000],
+            ],
+        },
+        {
+            important: true,
+            comment: "Character Event Banner 2",
+            comment5: "5 stars: Sangonomiya Kokomi",
+            comment4: "4 stars: Dori,Xingqiu and Sucrose",
+            gachaType: 400,
+            scheduleId: 923,
+            bannerType: "EVENT",
+            prefabPath: "GachaShowPanel_A095",
+            previewPrefabPath: "UI_Tab_GachaShowPanel_A095",
+            titlePath: "UI_GACHA_SHOW_PANEL_A053_TITLE",
+            costItemId: 223,
+            beginTime: 0,
+            endTime: 1664272800,
+            sortId: 9998,
+            rateUpItems4: [1068, 1025, 1043],
+            rateUpItems5: [1054],
+            fallbackItems5Pool2: [],
+            weights5: [
+                [1, 80],
+                [73, 80],
+                [90, 10000],
+            ],
+        },
+        {
+            important: true,
+            comment: "Weapon Event Banner",
+            comment5: "5 stars: Amos' Bow,Everlasting Moonglow",
+            comment4: "4 stars: Rust,Sacrificial,Dragon's Bane,Favonius Greatsword,Eye of Perception",
+            gachaType: 302,
+            scheduleId: 913,
+            bannerType: "WEAPON",
+            prefabPath: "GachaShowPanel_A096",
+            previewPrefabPath: "UI_Tab_GachaShowPanel_A096",
+            titlePath: "UI_GACHA_SHOW_PANEL_A021_TITLE",
+            costItemId: 223,
+            beginTime: 0,
+            endTime: 1664272800,
+            sortId: 9997,
+            rateUpItems4: [15405, 11403, 13401, 12401, 14409],
+            rateUpItems5: [15502, 14506],
             fallbackItems5Pool1: [],
             weights4: [
                 [1, 600],
