@@ -806,6 +806,7 @@ export default function handler(req, res) {
         },
         // Banner 3.0
         {
+            important: true,
             comment: "Character Event Banner 1",
             comment5: "5 stars: Tighnari",
             comment4: "4 stars: Collei, Diona and Fischl",
@@ -828,6 +829,7 @@ export default function handler(req, res) {
             ],
         },
         {
+            important: true,
             comment: "Character Event Banner 2",
             comment5: "5 stars: Zhongli",
             comment4: "4 stars: Collei, Diona and Fischl",
@@ -851,6 +853,7 @@ export default function handler(req, res) {
             ],
         },
         {
+            important: true,
             comment: "Weapon Event Banner",
             comment5: "5 stars: Hunter's Path, Vortex Vanquisher",
             comment4: "4 stars: The Stringless, Favonius Sword, Favonius Lance, Favonius Codex, The Bell",
@@ -882,9 +885,8 @@ export default function handler(req, res) {
             eventChance4: 75,
             eventChance5: 75,
         },
-        // Banner 3.0 #2
+        // Banner 3.0 #2 (Broke)
         {
-            important: true,
             comment: "Character Event Banner 1",
             comment5: "5 stars: Ganyu",
             comment4: "4 stars: Dori,Xingqiu and Sucrose",
@@ -907,7 +909,6 @@ export default function handler(req, res) {
             ],
         },
         {
-            important: true,
             comment: "Character Event Banner 2",
             comment5: "5 stars: Sangonomiya Kokomi",
             comment4: "4 stars: Dori,Xingqiu and Sucrose",
@@ -931,7 +932,6 @@ export default function handler(req, res) {
             ],
         },
         {
-            important: true,
             comment: "Weapon Event Banner",
             comment5: "5 stars: Amos' Bow,Everlasting Moonglow",
             comment4: "4 stars: Rust,Sacrificial,Dragon's Bane,Favonius Greatsword,Eye of Perception",
