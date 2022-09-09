@@ -247,6 +247,7 @@ export default function handler(req, res) {
             rateUpItems1: [1052],
             rateUpItems2: [1056, 1023, 1043],
         },
+        /*
         {
             gachaType: 416,
             scheduleId: 114,
@@ -262,6 +263,7 @@ export default function handler(req, res) {
             rateUpItems1: [1054],
             rateUpItems2: [1045, 1024, 1025],
         },
+        */
         {
             gachaType: 417,
             scheduleId: 115,
@@ -558,6 +560,7 @@ export default function handler(req, res) {
             rateUpItems1: [1002],
             rateUpItems2: [1002, 1002, 1002],
         },
+        /*
         {
             gachaType: 302,
             scheduleId: 133,
@@ -576,6 +579,7 @@ export default function handler(req, res) {
             rateUpItems1: [11509, 12504],
             rateUpItems2: [11401, 12402, 13407, 14401, 15401],
         },
+        */
         {
             gachaType: 301,
             scheduleId: 134,
@@ -616,6 +620,7 @@ export default function handler(req, res) {
                 [90, 10000],
             ],
         },
+        /*
         {
             gachaType: 302,
             scheduleId: 136,
@@ -646,6 +651,7 @@ export default function handler(req, res) {
                 [80, 10000],
             ],
         },
+        */
         // Banner 2.7 #2
         {
             gachaType: 301,
@@ -917,7 +923,7 @@ export default function handler(req, res) {
             bannerType: "EVENT",
             prefabPath: "GachaShowPanel_A095",
             previewPrefabPath: "UI_Tab_GachaShowPanel_A095",
-            titlePath: "UI_GACHA_SHOW_PANEL_A095_TITLE",
+            titlePath: "UI_GACHA_SHOW_PANEL_A053_TITLE",
             costItemId: 223,
             beginTime: 0,
             endTime: 1924992000,
@@ -940,7 +946,7 @@ export default function handler(req, res) {
             bannerType: "WEAPON",
             prefabPath: "GachaShowPanel_A096",
             previewPrefabPath: "UI_Tab_GachaShowPanel_A096",
-            titlePath: "UI_GACHA_SHOW_PANEL_A096_TITLE",
+            titlePath: "UI_GACHA_SHOW_PANEL_A021_TITLE",
             costItemId: 223,
             beginTime: 0,
             endTime: 1924992000,
