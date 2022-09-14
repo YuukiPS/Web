@@ -15,14 +15,13 @@ export async function getServerSideProps() {
         props: {
             fallback: {
                 [API_OS]: repoInfo_OS,
-                [API_CN]: repoInfo_CN
-            }
-        }
+                [API_CN]: repoInfo_CN,
+            },
+        },
     };
 }
 
 function Genshin() {
-
     const raw_os = useSWR(API_OS).data;
     const raw_cn = useSWR(API_CN).data;
 
@@ -41,7 +40,6 @@ function Genshin() {
     // for OS
     if (raw_os) {
         if (raw_os.data) {
-
             // check pre
             if (raw_os.data.pre_download_game) {
                 get_os = raw_os.data.pre_download_game;
@@ -73,7 +71,6 @@ function Genshin() {
     // for CN
     if (raw_cn) {
         if (raw_cn.data) {
-
             // check pre
             if (raw_cn.data.pre_download_game) {
                 get_cn = raw_cn.data.pre_download_game;
@@ -99,7 +96,7 @@ function Genshin() {
     }
 
     // TODO: get api
-    let Launcher_PC = "https://github.com/akbaryahya/YuukiLauncher/releases";
+    let Launcher_PC = "https://github.com/akbaryahya/YuukiPS-Launcher/releases";
     let Launcher_PC2 = "https://github.com/Grasscutters/Cultivation/releases";
 
     // Server CloudFlare
@@ -151,7 +148,16 @@ function Genshin() {
                 </Head>
 
                 <h1 className="title">Genshin Impact</h1>
-                <div className="description">Currently version {version} {IsPre}, download link below.</div>
+                <div className="description">
+                    <div className="new-line">
+                        Currently version {version} {IsPre}, download link below.
+                    </div>
+                    <div className="new-line">
+                        <a href="https://yuuki.me/how-to-connect-genshin-impact-private-server/" target="_blank" rel="sponsored">
+                            Tutorial Here
+                        </a>
+                    </div>
+                </div>
 
                 <div className="container mx-sm">
                     <h3 className="text-center py-3">PC Full Data (DL: Server Original)</h3>
@@ -178,12 +184,12 @@ function Genshin() {
 
                     <h3 className="text-center py-3">PC Launcher</h3>
                     <div className="flex justify-center gap-2 py-3">
-                        <a href={`${Launcher_PC2}`} className="btn btn-wide">
+                        <a href={`${Launcher_PC2}`} className="btn btn-wide" target="_blank" rel="sponsored">
                             Cultivation
                         </a>
 
-                        <a href={`${Launcher_PC}`} className="btn btn-wide">
-                            YuukiLauncher
+                        <a href={`${Launcher_PC}`} className="btn btn-wide" target="_blank" rel="sponsored">
+                            YuukiPS-Launcher
                         </a>
                     </div>
 
@@ -210,7 +216,7 @@ function Genshin() {
                     </div>
 
                     <h4 className="text-center py-3">
-                        We recommend using Cultivation/YuukiLauncher instead using manual methods patch.
+                        We recommend using Launcher instead using Manual Methods Patch.
                     </h4>
 
                     <h3 className="text-center py-3">Metadata Patch (DL: Server Yuuki)</h3>
@@ -248,16 +254,15 @@ function Genshin() {
 
                     <div className="description">
                         <div className="new-line">
-                            For downloading game data, we recommend always using original server instead Server CF
+                            For downloading Game Data, we recommend always using Original Server instead Server CF
                             because it has a rate limit from Google Drive. and to download Launcher Mod use Yuuki
                             Server.
                         </div>
                         <div className="new-line">
                             Some links are also not available if that happens please wait for a few hours or contact
-                            admin.
+                            admin.Every time there is an update, link will be updated here so always check.
                         </div>
                     </div>
-
                 </div>
             </Layout>
         </>
