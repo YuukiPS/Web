@@ -181,7 +181,7 @@ function Genshin() {
                         Currently version {version} {IsPre}, download link below.
                     </div>
                     <div className="new-line">
-                        <a href="https://yuuki.me/how-to-connect-genshin-impact-private-server/" target="_blank" rel="sponsored">
+                        <a href="https://www.yuuki.me/2022/09/how-to-connect-genshin-impact-private.html" target="_blank" rel="sponsored">
                             Tutorial Here
                         </a>
                     </div>
