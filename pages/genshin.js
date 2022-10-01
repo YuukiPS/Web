@@ -95,50 +95,78 @@ function Genshin() {
         }
     }
 
-    // TODO: get api
+    // URL Launcher
     let Launcher_PC = "https://github.com/akbaryahya/YuukiPS-Launcher/releases";
     let Launcher_PC2 = "https://github.com/Grasscutters/Cultivation/releases";
 
-    // Server CloudFlare
+    // Server CloudFlare (Backup)
     let Server1 = "https://file.yuuki.me/0:/Project/GenshinImpact/Data";
 
+    // Server Yuuki (Main)
+    let Server2 = "https://drive.yuuki.me/api/public/dl/ZOrLF1E5/GenshinImpact/Data";
+
+    // PC Server 1
     let Server1_OS_PC = Server1 + "/PC/" + version + "/Release/Global";
     let Server1_CN_PC = Server1 + "/PC/" + version + "/Release/Chinese";
 
-    let Server1_CN_AD = Server1 + "/Android/" + version + "/Release/Chinese";
-    let Server1_OS_AD = Server1 + "/Android/" + version + "/Release/Global";
-
-    let Metadata_OS_PC_MOD = Server1_OS_PC + "/Patch/global-metadata-patched.dat";
-    let Metadata_CN_PC_MOD = Server1_CN_PC + "/Patch/global-metadata-patched.dat";
-
-    let Metadata_OS_PC_ORI2 = Server1_OS_PC + "/Patch/global-metadata-original.dat";
-    let Metadata_CN_PC_ORI2 = Server1_CN_PC + "/Patch/global-metadata-original.dat";
-
-    // TODO: get version
-    let DL_OS_AD = Server1_OS_AD + "/YuukiPS.apk";
-    let DL_CN_AD = Server1_CN_AD + "/YuukiPS.apk";
-
-    // Server Yuuki
-    let Server2 = "https://drive.yuuki.me/api/public/dl/ZOrLF1E5/GenshinImpact/Data";
-
+    // PC Server 2
     let Server2_OS2 = Server2 + "/PC/" + version + "/Release/Global";
     let Server2_CN2 = Server2 + "/PC/" + version + "/Release/Chinese";
 
+    // Android Server 1
+    let Server1_CN_AD = Server1 + "/Android/" + version + "/Release/Chinese";
+    let Server1_OS_AD = Server1 + "/Android/" + version + "/Release/Global";
+
+    // Android Server 2
     let Server2_CN_AD = Server2 + "/Android/" + version + "/Release/Chinese";
     let Server2_OS_AD = Server2 + "/Android/" + version + "/Release/Global";
 
-    let DL_OS_AD2 = Server2_OS_AD + "/YuukiPS.apk";
-    let DL_CN_AD2 = Server2_CN_AD + "/YuukiPS.apk";
-
+    // Metadata (PC)
+    // - SV 1 (Patched)
+    let Metadata_OS_PC_MOD = Server1_OS_PC + "/Patch/global-metadata-patched.dat";
+    let Metadata_CN_PC_MOD = Server1_CN_PC + "/Patch/global-metadata-patched.dat";
+    // - SV 1 (Original)
+    let Metadata_OS_PC_ORI2 = Server1_OS_PC + "/Patch/global-metadata-original.dat";
+    let Metadata_CN_PC_ORI2 = Server1_CN_PC + "/Patch/global-metadata-original.dat";
+    // - SV 2 (Patched)
     let Metadata_OS_PC_MOD2 = Server2_OS2 + "/Patch/global-metadata-patched.dat";
     let Metadata_CN_PC_MOD2 = Server2_CN2 + "/Patch/global-metadata-patched.dat";
+
+    // UserAssembly (PC)
+    // - SV 1 (Patched)
+    let UserAssembly_OS_PC_MOD = Server1_OS_PC + "/Patch/UserAssembly-patched.dll";
+    let UserAssembly_CN_PC_MOD = Server1_CN_PC + "/Patch/UserAssembly-patched.dll";
+    // - SV 1 (Original)
+    let UserAssembly_OS_PC_ORI2 = Server1_OS_PC + "/Patch/UserAssembly-original.dll";
+    let UserAssembly_CN_PC_ORI2 = Server1_CN_PC + "/Patch/UserAssembly-original.dll";
+    // - SV 2 (Patched)
+    let UserAssembly_OS_PC_MOD2 = Server2_OS2 + "/Patch/UserAssembly-patched.dll";
+    let UserAssembly_CN_PC_MOD2 = Server2_CN2 + "/Patch/UserAssembly-patched.dll";
+
+    // Launcher Android (Official)
+    let DL_OS_AD = Server1_OS_AD + "/YuukiPS.apk";
+    let DL_CN_AD = Server1_CN_AD + "/YuukiPS.apk";
+    // Launcher Android (Unofficial)
+    let DL_OS_AD_UNO = Server1_OS_AD + "/ChinaPS.apk";
+    let DL_CN_AD_UNO  = Server1_CN_AD + "/ChinaPS.apk";   
+
+    // Launcher Android (Official)
+    let DL_OS_AD2 = Server2_OS_AD + "/YuukiPS.apk";
+    let DL_CN_AD2 = Server2_CN_AD + "/YuukiPS.apk";
+    // Launcher Android (Unofficial)
+    let DL_OS_AD2_UNO = Server2_OS_AD + "/ChinaPS.apk";
+    let DL_CN_AD2_UNO  = Server2_CN_AD + "/ChinaPS.apk";  
 
     let DL_OS_Backup = Server1_OS_PC + "/" + DL_OS.substring(DL_OS.lastIndexOf("/") + 1);
     let DL_CN_Backup = Server1_CN_PC + "/" + DL_CN.substring(DL_CN.lastIndexOf("/") + 1);
 
     // Server Official
+    // Metadata
     let Metadata_OS_PC_ORI = Decompressed_OS + "/GenshinImpact_Data/Native/Data/Metadata/global-metadata.dat";
     let Metadata_CN_PC_ORI = Decompressed_CN + "/YuanShen_Data/Native/Data/Metadata/global-metadata.dat";
+    // UserAssembly
+    let UserAssembly_OS_PC_ORI = Decompressed_OS + "/GenshinImpact_Data/Native/UserAssembly.dll";
+    let UserAssembly_CN_PC_ORI = Decompressed_CN + "/YuanShen_Data/Native/UserAssembly.dll";
 
     return (
         <>
@@ -218,6 +246,39 @@ function Genshin() {
                     <h4 className="text-center py-3">
                         We recommend using Launcher instead using Manual Methods Patch.
                     </h4>
+
+                    <h3 className="text-center py-3">UserAssembly Patch (DL: Server Yuuki)</h3>
+                    <div className="flex justify-center gap-2 py-3">
+                        <a href={`${UserAssembly_OS_PC_MOD2}`} className="btn btn-wide">
+                            Global
+                        </a>
+
+                        <a href={`${UserAssembly_CN_PC_MOD2}`} className="btn btn-wide">
+                            China
+                        </a>
+                    </div>
+
+                    <h3 className="text-center py-3">UserAssembly Patch (DL: Server CF)</h3>
+                    <div className="flex justify-center gap-2 py-3">
+                        <a href={`${UserAssembly_OS_PC_MOD}`} className="btn btn-wide">
+                            Global
+                        </a>
+
+                        <a href={`${UserAssembly_CN_PC_MOD}`} className="btn btn-wide">
+                            China
+                        </a>
+                    </div>
+
+                    <h3 className="text-center py-3">UserAssembly (DL: Server Original)</h3>
+                    <div className="flex justify-center gap-2 py-3">
+                        <a href={`${UserAssembly_OS_PC_ORI}`} className="btn btn-wide">
+                            Global
+                        </a>
+
+                        <a href={`${UserAssembly_CN_PC_ORI}`} className="btn btn-wide">
+                            China
+                        </a>
+                    </div>
 
                     <h3 className="text-center py-3">Metadata Patch (DL: Server Yuuki)</h3>
                     <div className="flex justify-center gap-2 py-3">
