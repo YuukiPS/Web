@@ -29,11 +29,11 @@ export default function App({ server = "sg" }) {
             if (data.status.DockerGS) {
                 version = data.status.DockerGS;
             }
-            if (data.status.TotalAccount) {
-                traveler = new Intl.NumberFormat("en-US").format(data.status.TotalAccount);
+            if (data.status.TotalPlayer) {
+                traveler = new Intl.NumberFormat("en-US").format(data.status.TotalPlayer);
             }
             if (data.status.MemoryCurrently) {
-                ram = data.status.MemoryCurrently + " MB";
+                ram = data.status.MemoryCurrently/data.status.MemoryMax * 100 + " %";
             }
         }
     }
