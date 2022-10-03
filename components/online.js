@@ -33,7 +33,7 @@ export default function App({ server = "sg" }) {
                 traveler = new Intl.NumberFormat("en-US").format(data.status.TotalPlayer);
             }
             if (data.status.MemoryCurrently) {
-                ram = data.status.MemoryCurrently/data.status.MemoryMax * 100 + " %";
+                ram = (data.status.MemoryCurrently/data.status.MemoryMax * 100).toFixed(2) + " %";
             }
         }
     }

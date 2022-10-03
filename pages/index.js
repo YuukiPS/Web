@@ -33,7 +33,7 @@ export default function Home() {
                         Star Rail
                     </a>
 
-                    <a href="https://github.com/akbaryahya/DockerGC" target="_blank" rel="sponsored" class="btn">
+                    <a href="https://github.com/akbaryahya/DockerGS" target="_blank" rel="sponsored" class="btn">
                         Create Server
                     </a>
                 </div>
