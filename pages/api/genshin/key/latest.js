@@ -20,7 +20,7 @@ export default async function handler(req, res) {
                 url_os: "https://drive.yuuki.me/api/public/dl/ZOrLF1E5/GenshinImpact/Data/PC/3.1.0/Global/Patch/UserAssembly-patched.dll",
                 url_cn: "https://drive.yuuki.me/api/public/dl/ZOrLF1E5/GenshinImpact/Data/PC/3.1.0/Chinese/Patch/UserAssembly-patched.dll",
                 md5_os: "AEA170BC431C5005663A82A8C4926C61",
-                md5_cn: "",
+                md5_cn: "0D18D67DCE797A641B3C10F30ECFD704",
             },
         },
         Original: {
