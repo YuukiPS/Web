@@ -106,20 +106,20 @@ function Genshin() {
     let Server2 = "https://drive.yuuki.me/api/public/dl/ZOrLF1E5/GenshinImpact/Data";
 
     // PC Server 1
-    let Server1_OS_PC = Server1 + "/PC/" + version + "/Release/Global";
-    let Server1_CN_PC = Server1 + "/PC/" + version + "/Release/Chinese";
+    let Server1_OS_PC = Server1 + "/PC/" + version + "/Global";
+    let Server1_CN_PC = Server1 + "/PC/" + version + "/Chinese";
 
     // PC Server 2
-    let Server2_OS2 = Server2 + "/PC/" + version + "/Release/Global";
-    let Server2_CN2 = Server2 + "/PC/" + version + "/Release/Chinese";
+    let Server2_OS2 = Server2 + "/PC/" + version + "/Global";
+    let Server2_CN2 = Server2 + "/PC/" + version + "/Chinese";
 
     // Android Server 1
-    let Server1_CN_AD = Server1 + "/Android/" + version + "/Release/Chinese";
-    let Server1_OS_AD = Server1 + "/Android/" + version + "/Release/Global";
+    let Server1_CN_AD = Server1 + "/Android/" + version + "/Chinese";
+    let Server1_OS_AD = Server1 + "/Android/" + version + "/Global";
 
     // Android Server 2
-    let Server2_CN_AD = Server2 + "/Android/" + version + "/Release/Chinese";
-    let Server2_OS_AD = Server2 + "/Android/" + version + "/Release/Global";
+    let Server2_CN_AD = Server2 + "/Android/" + version + "/Chinese";
+    let Server2_OS_AD = Server2 + "/Android/" + version + "/Global";
 
     // Metadata (PC)
     // - SV 1 (Patched)
