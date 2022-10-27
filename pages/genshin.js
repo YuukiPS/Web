@@ -1,4 +1,5 @@
 import Layout, { siteTitle } from "../components/layout";
+import Online from "../components/online";
 import Head from "next/head";
 import useSWR, { SWRConfig } from "swr";
 
@@ -148,14 +149,14 @@ function Genshin() {
     let DL_CN_AD = Server1_CN_AD + "/YuukiPS.apk";
     // Launcher Android (Unofficial)
     let DL_OS_AD_UNO = Server1_OS_AD + "/ChinaPS.apk";
-    let DL_CN_AD_UNO  = Server1_CN_AD + "/ChinaPS.apk";   
+    let DL_CN_AD_UNO = Server1_CN_AD + "/ChinaPS.apk";
 
     // Launcher Android (Official)
     let DL_OS_AD2 = Server2_OS_AD + "/YuukiPS.apk";
     let DL_CN_AD2 = Server2_CN_AD + "/YuukiPS.apk";
     // Launcher Android (Unofficial)
     let DL_OS_AD2_UNO = Server2_OS_AD + "/ChinaPS.apk";
-    let DL_CN_AD2_UNO  = Server2_CN_AD + "/ChinaPS.apk";  
+    let DL_CN_AD2_UNO = Server2_CN_AD + "/ChinaPS.apk";
 
     let DL_OS_Backup = Server1_OS_PC + "/" + DL_OS.substring(DL_OS.lastIndexOf("/") + 1);
     let DL_CN_Backup = Server1_CN_PC + "/" + DL_CN.substring(DL_CN.lastIndexOf("/") + 1);
@@ -173,7 +174,7 @@ function Genshin() {
             <Layout genshin>
                 <Head>
                     <title>{"Download Genshin Impact " + version + " - " + siteTitle}</title>
-                </Head>
+                </Head>                
 
                 <h1 className="title">Genshin Impact</h1>
                 <div className="description">
@@ -181,9 +182,20 @@ function Genshin() {
                         Currently version {version} {IsPre}, download link below.
                     </div>
                     <div className="new-line">
-                        <a href="https://www.yuuki.me/2022/09/how-to-connect-genshin-impact-private.html" target="_blank" rel="sponsored">
+                        <a
+                            href="https://www.yuuki.me/2022/09/how-to-connect-genshin-impact-private.html"
+                            target="_blank"
+                            rel="sponsored"
+                        >
                             Tutorial Here
                         </a>
+                    </div>
+                </div>
+
+                <div class="text-center py-3">
+                    <div class="stats bg-primary text-primary-content">
+                        <Online server="sg" />
+                        <Online server="eu" />
                     </div>
                 </div>
 

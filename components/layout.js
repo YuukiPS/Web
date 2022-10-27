@@ -25,7 +25,7 @@ export default function Layout({ children, home }) {
                 </>
             )}
 
-            <footer class="footer footer-center mt-3 p-4 bg-base-300 text-base-content">
+            <footer class="footer footer-center p-4 bg-base-300 text-base-content">
                 <div>
                     <p>
                         <a class="float-left mr-2" href="https://discord.gg/tRYMG7Nm2D" target="_blank" rel="sponsored">
