@@ -26,11 +26,11 @@ export default function Home() {
                     </a>
 
                     <a href="/genshin" class="btn">
-                        Genshin Impact
+                        Play Genshin Impact
                     </a>
 
                     <a href="/starrail" class="btn">
-                        Star Rail
+                        Play Star Rail
                     </a>
 
                     <a href="https://github.com/akbaryahya/DockerGS" target="_blank" rel="sponsored" class="btn">
