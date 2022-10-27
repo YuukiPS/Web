@@ -22,13 +22,26 @@ export default function Home() {
                                 Web Command
                             </a>
 
-                            <a href="/genshin" class="btn btn-primary">
-                                Play Genshin Impact
-                            </a>
-
-                            <a href="/starrail" class="btn btn-primary">
-                                Play Star Rail
-                            </a>
+                            <div className="dropdown dropdown-hover">
+                                <label tabIndex={0} className="btn btn-primary">
+                                    Play
+                                </label>
+                                <ul
+                                    tabIndex={0}
+                                    className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
+                                >
+                                    <li>
+                                        <a href="/genshin">
+                                            Genshin Impact
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/starrail">
+                                            Star Rail
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
 
                             <a
                                 href="https://github.com/akbaryahya/DockerGS"
@@ -38,7 +51,6 @@ export default function Home() {
                             >
                                 Create Server
                             </a>
-
                         </div>
                     </div>
                 </div>
