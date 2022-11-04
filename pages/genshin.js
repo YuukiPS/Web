@@ -148,15 +148,15 @@ function Genshin() {
     let DL_OS_AD = Server1_OS_AD + "/YuukiPS.apk";
     let DL_CN_AD = Server1_CN_AD + "/YuukiPS.apk";
     // Launcher Android (Unofficial)
-    let DL_OS_AD_UNO = Server1_OS_AD + "/ChinaPS.apk";
-    let DL_CN_AD_UNO = Server1_CN_AD + "/ChinaPS.apk";
+    let DL_OS_AD_UNO = Server1_OS_AD + "/ChinesePS.apk";
+    let DL_CN_AD_UNO = Server1_CN_AD + "/ChinesePS.apk";
 
     // Launcher Android (Official)
     let DL_OS_AD2 = Server2_OS_AD + "/YuukiPS.apk";
     let DL_CN_AD2 = Server2_CN_AD + "/YuukiPS.apk";
     // Launcher Android (Unofficial)
-    let DL_OS_AD2_UNO = Server2_OS_AD + "/ChinaPS.apk";
-    let DL_CN_AD2_UNO = Server2_CN_AD + "/ChinaPS.apk";
+    let DL_OS_AD2_UNO = Server2_OS_AD + "/ChinesePS.apk";
+    let DL_CN_AD2_UNO = Server2_CN_AD + "/ChinesePS.apk";
 
     let DL_OS_Backup = Server1_OS_PC + "/" + DL_OS.substring(DL_OS.lastIndexOf("/") + 1);
     let DL_CN_Backup = Server1_CN_PC + "/" + DL_CN.substring(DL_CN.lastIndexOf("/") + 1);
@@ -174,7 +174,7 @@ function Genshin() {
             <Layout genshin>
                 <Head>
                     <title>{"Download Genshin Impact " + version + " - " + siteTitle}</title>
-                </Head>                
+                </Head>
 
                 <h1 className="title">Genshin Impact</h1>
                 <div className="description">
@@ -207,7 +207,7 @@ function Genshin() {
                         </a>
 
                         <a href={`${DL_CN}`} className="btn btn-wide">
-                            China
+                            Chinese
                         </a>
                     </div>
 
@@ -218,7 +218,7 @@ function Genshin() {
                         </a>
 
                         <a href={`${DL_CN_Backup}`} className="btn btn-wide">
-                            China
+                            Chinese
                         </a>
                     </div>
 
@@ -238,20 +238,12 @@ function Genshin() {
                         <a href={`${DL_OS_AD2}`} className="btn btn-wide">
                             Global
                         </a>
-
-                        <a href={`${DL_CN_AD2}`} className="btn btn-wide">
-                            China
-                        </a>
                     </div>
 
                     <h3 className="text-center py-3">Android Launcher Mod No-Root (DL: Server CF)</h3>
                     <div className="flex justify-center gap-2 py-3">
                         <a href={`${DL_OS_AD}`} className="btn btn-wide">
                             Global
-                        </a>
-
-                        <a href={`${DL_CN_AD}`} className="btn btn-wide">
-                            China
                         </a>
                     </div>
 
@@ -266,7 +258,7 @@ function Genshin() {
                         </a>
 
                         <a href={`${UserAssembly_CN_PC_MOD2}`} className="btn btn-wide">
-                            China
+                            Chinese
                         </a>
                     </div>
 
@@ -277,7 +269,7 @@ function Genshin() {
                         </a>
 
                         <a href={`${UserAssembly_CN_PC_MOD}`} className="btn btn-wide">
-                            China
+                            Chinese
                         </a>
                     </div>
 
@@ -288,7 +280,7 @@ function Genshin() {
                         </a>
 
                         <a href={`${UserAssembly_CN_PC_ORI}`} className="btn btn-wide">
-                            China
+                            Chinese
                         </a>
                     </div>
 
@@ -299,7 +291,7 @@ function Genshin() {
                         </a>
 
                         <a href={`${Metadata_CN_PC_MOD2}`} className="btn btn-wide">
-                            China
+                            Chinese
                         </a>
                     </div>
 
@@ -310,7 +302,7 @@ function Genshin() {
                         </a>
 
                         <a href={`${Metadata_CN_PC_MOD}`} className="btn btn-wide">
-                            China
+                            Chinese
                         </a>
                     </div>
 
@@ -321,7 +313,7 @@ function Genshin() {
                         </a>
 
                         <a href={`${Metadata_CN_PC_ORI}`} className="btn btn-wide">
-                            China
+                            Chinese
                         </a>
                     </div>
 
