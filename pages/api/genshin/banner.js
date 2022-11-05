@@ -1133,7 +1133,7 @@ export default function handler(req, res) {
             beginTime: 0,
             endTime: 1701849599,
             sortId: 9998,
-            rateUpItems4: [1073],
+            //rateUpItems4: [1073],
             rateUpItems5: [1073],
             fallbackItems4Pool1: [1020, 1032, 1034],
         },
