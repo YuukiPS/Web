@@ -103,6 +103,9 @@ function Genshin() {
     // Server CloudFlare (Backup)
     let Server1 = "https://file.yuuki.me/0:/Project/GenshinImpact/Data";
 
+    // Server Yuuki 2
+    let Server3 = "https://file2.yuuki.me/GD1/Project/GenshinImpact/Data";
+
     // Server Yuuki (Main)
     let Server2 = "https://drive.yuuki.me/api/public/dl/ZOrLF1E5/GenshinImpact/Data";
 
@@ -121,6 +124,10 @@ function Genshin() {
     // Android Server 2
     let Server2_CN_AD = Server2 + "/Android/" + version + "/Chinese";
     let Server2_OS_AD = Server2 + "/Android/" + version + "/Global";
+
+    // Android Server 3
+    let Server3_CN_AD = Server3 + "/Android/" + version + "/Chinese";
+    let Server3_OS_AD = Server3 + "/Android/" + version + "/Global";
 
     // Metadata (PC)
     // - SV 1 (Patched)
@@ -145,7 +152,9 @@ function Genshin() {
     let UserAssembly_CN_PC_MOD2 = Server2_CN2 + "/Patch/UserAssembly-patched.dll";
 
     // Launcher Android (Official)
-    let DL_OS_AD = Server1_OS_AD + "/YuukiPS.apk";
+    let DL_OS_AD_MOD1 = Server1_OS_AD + "/YuukiPS.apk";
+    let DL_OS_AD_MOD2 = Server1_OS_AD + "/YuukiPS_V2.apk";
+    
     let DL_CN_AD = Server1_CN_AD + "/YuukiPS.apk";
     // Launcher Android (Unofficial)
     let DL_OS_AD_UNO = Server1_OS_AD + "/ChinesePS.apk";
@@ -157,6 +166,9 @@ function Genshin() {
     // Launcher Android (Unofficial)
     let DL_OS_AD2_UNO = Server2_OS_AD + "/ChinesePS.apk";
     let DL_CN_AD2_UNO = Server2_CN_AD + "/ChinesePS.apk";
+
+    // Data
+    let DL_OS_AD3_DATA = Server3_OS_AD+"/Part"
 
     let DL_OS_Backup = Server1_OS_PC + "/" + DL_OS.substring(DL_OS.lastIndexOf("/") + 1);
     let DL_CN_Backup = Server1_CN_PC + "/" + DL_CN.substring(DL_CN.lastIndexOf("/") + 1);
@@ -242,8 +254,14 @@ function Genshin() {
 
                     <h3 className="text-center py-3">Android Launcher Mod No-Root (DL: Server CF)</h3>
                     <div className="flex justify-center gap-2 py-3">
-                        <a href={`${DL_OS_AD}`} className="btn btn-wide">
-                            Global
+                        <a href={`${DL_OS_AD_MOD1}`} className="btn btn-wide">
+                            Global (Clone - V1)
+                        </a>
+                        <a href={`${DL_OS_AD_MOD2}`} className="btn btn-wide">
+                            Global (Without Clone -V2)
+                        </a>
+                        <a href={`${DL_OS_AD3_DATA}`} className="btn btn-wide">
+                            Data Game
                         </a>
                     </div>
 
