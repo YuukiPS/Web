@@ -154,21 +154,23 @@ function Genshin() {
     // Launcher Android (Official)
     let DL_OS_AD_MOD1 = Server1_OS_AD + "/YuukiPS.apk";
     let DL_OS_AD_MOD2 = Server1_OS_AD + "/YuukiPS_V2.apk";
-    
+
     let DL_CN_AD = Server1_CN_AD + "/YuukiPS.apk";
     // Launcher Android (Unofficial)
     let DL_OS_AD_UNO = Server1_OS_AD + "/ChinesePS.apk";
     let DL_CN_AD_UNO = Server1_CN_AD + "/ChinesePS.apk";
 
     // Launcher Android (Official)
-    let DL_OS_AD2 = Server2_OS_AD + "/YuukiPS.apk";
+    let DL_OS_AD2_MOD1 = Server2_OS_AD + "/YuukiPS.apk";
+    let DL_OS_AD2_MOD2 = Server2_OS_AD + "/YuukiPS_V2.apk";
+
     let DL_CN_AD2 = Server2_CN_AD + "/YuukiPS.apk";
     // Launcher Android (Unofficial)
     let DL_OS_AD2_UNO = Server2_OS_AD + "/ChinesePS.apk";
     let DL_CN_AD2_UNO = Server2_CN_AD + "/ChinesePS.apk";
 
     // Data
-    let DL_OS_AD3_DATA = Server3_OS_AD+"/Part"
+    let DL_OS_AD3_DATA = Server3_OS_AD + "/Part";
 
     let DL_OS_Backup = Server1_OS_PC + "/" + DL_OS.substring(DL_OS.lastIndexOf("/") + 1);
     let DL_CN_Backup = Server1_CN_PC + "/" + DL_CN.substring(DL_CN.lastIndexOf("/") + 1);
@@ -245,23 +247,26 @@ function Genshin() {
                         </a>
                     </div>
 
-                    <h3 className="text-center py-3">Android Launcher Mod No-Root (DL: Server Yuuki)</h3>
+                    <h3 className="text-center py-3">Android Launcher</h3>
                     <div className="flex justify-center gap-2 py-3">
-                        <a href={`${DL_OS_AD2}`} className="btn btn-wide">
-                            Global
+                        <a href={`${DL_OS_AD2_MOD1}`} className="btn btn">
+                            Global (Clone - V1) (DL1)
+                        </a>
+                        <a href={`${DL_OS_AD2_MOD2}`} className="btn btn">
+                            Global (Without Clone -V2) (DL1)
                         </a>
                     </div>
-
-                    <h3 className="text-center py-3">Android Launcher Mod No-Root (DL: Server CF)</h3>
                     <div className="flex justify-center gap-2 py-3">
-                        <a href={`${DL_OS_AD_MOD1}`} className="btn btn-wide">
-                            Global (Clone - V1)
+                        <a href={`${DL_OS_AD_MOD1}`} className="btn btn">
+                            Global (Clone - V1) (DL2)
                         </a>
-                        <a href={`${DL_OS_AD_MOD2}`} className="btn btn-wide">
-                            Global (Without Clone -V2)
+                        <a href={`${DL_OS_AD_MOD2}`} className="btn btn">
+                            Global (Without Clone -V2) (DL2)
                         </a>
+                    </div>
+                    <div className="flex justify-center gap-2 py-3">
                         <a href={`${DL_OS_AD3_DATA}`} className="btn btn-wide">
-                            Data Game
+                            Data Game (DL3)
                         </a>
                     </div>
 
