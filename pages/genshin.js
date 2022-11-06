@@ -213,7 +213,61 @@ function Genshin() {
                     </div>
                 </div>
 
-                <div className="container mx-sm">
+                <div className="container mx-sm">                   
+
+                    <h3 className="text-center py-3">PC Launcher</h3>
+                    <h4 className="text-center py-1">
+                        Cultivation Requires Manual Install UserAssembly.
+                        <br />
+                        YuukiPS-Launcher Requires NET 6 Installation.
+                    </h4>
+                    <div className="flex justify-center gap-2 py-3">
+                        <a href={`${Launcher_PC2}`} className="btn btn-wide" target="_blank" rel="sponsored">
+                            Cultivation
+                        </a>
+
+                        <a href={`${Launcher_PC}`} className="btn btn-wide" target="_blank" rel="sponsored">
+                            YuukiPS-Launcher
+                        </a>
+                    </div>
+
+                    <h3 className="text-center py-3">Android Launcher</h3>
+                    <h4 className="text-center py-1">
+                        V1 requires renaming game data due to clone game, please read tutorial.
+                        <br />
+                        V2 is better because it can download game data from in-game and no need to rename and play
+                        official version.
+                        <br />
+                        (Google,Facebook login not working)
+                    </h4>
+                    <div className="flex justify-center gap-2 py-3">
+                        <a href={`${DL_OS_AD2_MOD1}`} className="btn btn-wide">
+                            V1 (DL1)
+                        </a>
+                        <a href={`${DL_OS_AD2_MOD2}`} className="btn btn-wide">
+                            V2 (DL1)
+                        </a>
+                    </div>
+                    <div className="flex justify-center gap-2 py-3">
+                        <a href={`${DL_OS_AD_MOD1}`} className="btn btn-wide">
+                            V1 (DL2)
+                        </a>
+                        <a href={`${DL_OS_AD_MOD2}`} className="btn btn-wide">
+                            V2 (DL2)
+                        </a>
+                    </div>
+                    <div className="flex justify-center gap-2 py-3">
+                        <a href={`${DL_OS_AD3_DATA}`} className="btn btn-wide">
+                            Data Game (DL3)
+                        </a>
+                    </div>
+
+                    <h4 className="text-center py-3">
+                        We recommend using Launcher instead using manual methods!!!.
+                        <br />
+                        The list below is for people with experience in copying/pasting. if you don't understand don't use/download.
+                    </h4>
+
                     <h3 className="text-center py-3">PC Full Data (DL: Server Original)</h3>
                     <div className="flex justify-center gap-2 py-3">
                         <a href={`${DL_OS}`} className="btn btn-wide">
@@ -230,49 +284,10 @@ function Genshin() {
                         <a href={`${DL_OS_Backup}`} className="btn btn-wide">
                             Global
                         </a>
-
                         <a href={`${DL_CN_Backup}`} className="btn btn-wide">
                             Chinese
                         </a>
                     </div>
-
-                    <h3 className="text-center py-3">PC Launcher</h3>
-                    <div className="flex justify-center gap-2 py-3">
-                        <a href={`${Launcher_PC2}`} className="btn btn-wide" target="_blank" rel="sponsored">
-                            Cultivation
-                        </a>
-
-                        <a href={`${Launcher_PC}`} className="btn btn-wide" target="_blank" rel="sponsored">
-                            YuukiPS-Launcher
-                        </a>
-                    </div>
-
-                    <h3 className="text-center py-3">Android Launcher</h3>
-                    <div className="flex justify-center gap-2 py-3">
-                        <a href={`${DL_OS_AD2_MOD1}`} className="btn btn">
-                            Global (Clone - V1) (DL1)
-                        </a>
-                        <a href={`${DL_OS_AD2_MOD2}`} className="btn btn">
-                            Global (Without Clone -V2) (DL1)
-                        </a>
-                    </div>
-                    <div className="flex justify-center gap-2 py-3">
-                        <a href={`${DL_OS_AD_MOD1}`} className="btn btn">
-                            Global (Clone - V1) (DL2)
-                        </a>
-                        <a href={`${DL_OS_AD_MOD2}`} className="btn btn">
-                            Global (Without Clone -V2) (DL2)
-                        </a>
-                    </div>
-                    <div className="flex justify-center gap-2 py-3">
-                        <a href={`${DL_OS_AD3_DATA}`} className="btn btn-wide">
-                            Data Game (DL3)
-                        </a>
-                    </div>
-
-                    <h4 className="text-center py-3">
-                        We recommend using Launcher instead using Manual Methods Patch.
-                    </h4>
 
                     <h3 className="text-center py-3">UserAssembly Patch (DL: Server Yuuki)</h3>
                     <div className="flex justify-center gap-2 py-3">
