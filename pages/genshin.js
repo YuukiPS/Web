@@ -213,13 +213,20 @@ function Genshin() {
                     </div>
                 </div>
 
-                <div className="container mx-sm">                   
-
+                <div className="container mx-sm">
                     <h3 className="text-center py-3">PC Launcher</h3>
                     <h4 className="text-center py-1">
-                        Cultivation Requires Manual Install UserAssembly.
+                        Cultivation requires Manual Patch UserAssembly. (scroll down)
                         <br />
-                        YuukiPS-Launcher Requires NET 6 Installation.
+                        YuukiPS Launcher requires{" "}
+                        <a
+                            href={`https://dotnet.microsoft.com/en-us/download/dotnet/6.0/runtime`}
+                            target="_blank"
+                            rel="sponsored"
+                        >
+                            NET 6 installation
+                        </a>
+                        .
                     </h4>
                     <div className="flex justify-center gap-2 py-3">
                         <a href={`${Launcher_PC2}`} className="btn btn-wide" target="_blank" rel="sponsored">
@@ -233,7 +240,7 @@ function Genshin() {
 
                     <h3 className="text-center py-3">Android Launcher</h3>
                     <h4 className="text-center py-1">
-                        V1 requires renaming game data due to clone game, please read tutorial.
+                        V1 requires renaming game data for clone game, please read tutorial.
                         <br />
                         V2 is better because it can download game data from in-game and no need to rename and play
                         official version.
@@ -265,7 +272,8 @@ function Genshin() {
                     <h4 className="text-center py-3">
                         We recommend using Launcher instead using manual methods!!!.
                         <br />
-                        The list below is for people with experience in copying/pasting. if you don't understand don't use/download.
+                        The list below is for people with experience in copying/pasting. if you don't understand don't
+                        use/download.
                     </h4>
 
                     <h3 className="text-center py-3">PC Full Data (DL: Server Original)</h3>
@@ -288,6 +296,12 @@ function Genshin() {
                             Chinese
                         </a>
                     </div>
+
+                    <h4 className="text-center py-3">
+                        You don't need to download game data if you already have latest official version.
+                        <br />
+                        So you only need UserAssembly Patch+Proxy (Fiddler).
+                    </h4>
 
                     <h3 className="text-center py-3">UserAssembly Patch (DL: Server Yuuki)</h3>
                     <div className="flex justify-center gap-2 py-3">
@@ -321,6 +335,12 @@ function Genshin() {
                             Chinese
                         </a>
                     </div>
+
+                    <h4 className="text-center py-3">
+                        Metadata patch is not needed if your version is 2.8+.
+                        <br />
+                        Don't download if you don't know anything.
+                    </h4>
 
                     <h3 className="text-center py-3">Metadata Patch (DL: Server Yuuki)</h3>
                     <div className="flex justify-center gap-2 py-3">
@@ -358,8 +378,7 @@ function Genshin() {
                     <div className="description">
                         <div className="new-line">
                             For downloading Game Data, we recommend always using Original Server instead Server CF
-                            because it has a rate limit from Google Drive. and to download Launcher Mod use Yuuki
-                            Server.
+                            because it has a rate limit from Google Drive. and to download Launcher use Yuuki Server.
                         </div>
                         <div className="new-line">
                             Some links are also not available if that happens please wait for a few hours or contact

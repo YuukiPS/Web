@@ -8,7 +8,7 @@ export default function Home() {
                 <title>{siteTitle}</title>
             </Head>
 
-            <div className="hero min-h-screen" style={{ backgroundImage: `url("/image/banner1.png")` }}>
+            <div className="hero min-h-screen" style={{ backgroundImage: `url("/image/banner${Math.floor(Math.random() * 8) + 1}.png")` }}>
                 <div className="hero-overlay bg-opacity-60"></div>
                 <div className="hero-content text-center text-neutral-content">
                     <div className="max-w-md">

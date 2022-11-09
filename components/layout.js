@@ -35,7 +35,7 @@ export default function Layout({ children, home }) {
                             ></img>
                         </a>
 
-                        <img class="float-left mr-2" src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fps.yuuki.me&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=true"></img>
+                        <img class="float-left mr-2" src="//s4is.histats.com/stats/i/4713922.gif?4713922&103"></img>
 
                         <a href="https://stats.uptimerobot.com/L8Nx6FL4V" target="_blank" rel="sponsored">
                             <img class="float-left" alt="Uptime Robot ratio (30 days)" src="https://img.shields.io/uptimerobot/ratio/m792813707-8d10db668102aad9bdb04f78?label=Server"></img>
