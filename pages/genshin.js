@@ -97,7 +97,7 @@ function Genshin() {
     }
 
     // URL Launcher
-    let Launcher_PC = "https://github.com/akbaryahya/YuukiPS-Launcher/releases";
+    let Launcher_PC = "https://github.com/YuukiPS/Launcher-PC/releases";
     let Launcher_PC2 = "https://github.com/Grasscutters/Cultivation/releases";
 
     // Server CloudFlare (Backup)

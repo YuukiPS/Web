@@ -44,7 +44,7 @@ export default function Home() {
                             </div>
 
                             <a
-                                href="https://github.com/akbaryahya/DockerGS"
+                                href="https://github.com/YuukiPS/DockerGS"
                                 target="_blank"
                                 rel="sponsored"
                                 class="btn btn-primary"
