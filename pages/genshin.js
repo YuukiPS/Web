@@ -107,7 +107,7 @@ function Genshin() {
     let Server3 = "https://file2.yuuki.me/GD1/Project/GenshinImpact/Data";
 
     // Server Yuuki (Local)
-    let Server2 = "http://file2.yuuki.me/p/Public/Local_EU/Project/GenshinImpact/Data";
+    let Server2 = "https://file2.yuuki.me/p/Public/Local_EU/Project/GenshinImpact/Data";
 
     // PC Server 1
     let Server1_OS_PC = Server1 + "/PC/" + version + "/Global";
