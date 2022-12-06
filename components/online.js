@@ -49,7 +49,7 @@ export default function App({ server = "sg", game = "gs" }) {
 
     return (
         <div class="stat">
-            <div class="stat-title">{server_long}</div>
+            <div class="stat-title">{server_long} (GC)</div>
             <div class="stat-value">{online}</div>
             <div class="stat-title">Traveler</div>
             <div class="stat-value">{traveler}</div>

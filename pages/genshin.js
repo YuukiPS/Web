@@ -1,5 +1,6 @@
 import Layout, { siteTitle } from "../components/layout";
 import Online from "../components/online";
+import Online_GIO from "../components/online_gio";
 import Head from "next/head";
 import useSWR, { SWRConfig } from "swr";
 
@@ -213,6 +214,12 @@ function Genshin() {
                     </div>
                 </div>
 
+                <div class="text-center py-3">
+                    <div class="stats bg-primary text-primary-content">
+                        <Online_GIO />
+                    </div>
+                </div>
+                
                 <div className="container mx-sm">
                     <h3 className="text-center py-3">PC Launcher</h3>
                     <h4 className="text-center py-1">
