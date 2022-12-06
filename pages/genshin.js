@@ -5,8 +5,8 @@ import useSWR, { SWRConfig } from "swr";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
-const API_OS = "https://ps.yuuki.me/api/genshin/download/latest/os";
-const API_CN = "https://ps.yuuki.me/api/genshin/download/latest/cn";
+const API_OS = "https://ps.yuuki.me/api/genshin/download/archive/3.2.0/os";
+const API_CN = "https://ps.yuuki.me/api/genshin/download/archive/3.2.0/cn";
 
 // https://swr.vercel.app/examples/ssr
 export async function getServerSideProps() {
