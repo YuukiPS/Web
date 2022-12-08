@@ -39,7 +39,7 @@ export default function App({ server = "sg", game = "gs" }) {
                 version1 = data.status.Version;
             }
             if (data.status.TotalPlayer) {
-                traveler = new Intl.NumberFormat("en-US").format(data.status.TotalPlayer);
+                //traveler = new Intl.NumberFormat("en-US").format(data.status.TotalPlayer);
             }
             if (data.status.MemoryCurrently) {
                 ram = ((data.status.MemoryCurrently / data.status.MemoryMax) * 100).toFixed(2) + " %";
@@ -51,8 +51,6 @@ export default function App({ server = "sg", game = "gs" }) {
         <div class="stat">
             <div class="stat-title">{server_long} (GC)</div>
             <div class="stat-value">{online}</div>
-            <div class="stat-title">Traveler</div>
-            <div class="stat-value">{traveler}</div>
             <div class="stat-desc">
                 <div className="new-line">URL Remote: {url_remot_gs}</div>
                 <div className="new-line">URL Login: {url_login_gs}</div>

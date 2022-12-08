@@ -6,8 +6,8 @@ import useSWR, { SWRConfig } from "swr";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
-const API_OS = "https://ps.yuuki.me/api/genshin/download/archive/3.2.0/os";
-const API_CN = "https://ps.yuuki.me/api/genshin/download/archive/3.2.0/cn";
+const API_OS = "https://ps.yuuki.me/api/genshin/download/latest/os";
+const API_CN = "https://ps.yuuki.me/api/genshin/download/latest/cn";
 
 // https://swr.vercel.app/examples/ssr
 export async function getServerSideProps() {
@@ -118,17 +118,19 @@ function Genshin() {
     let Server2_OS2 = Server2 + "/PC/" + version + "/Global";
     let Server2_CN2 = Server2 + "/PC/" + version + "/Chinese";
 
+    let android_hack = "3.2.0";
+
     // Android Server 1
-    let Server1_CN_AD = Server1 + "/Android/" + version + "/Chinese";
-    let Server1_OS_AD = Server1 + "/Android/" + version + "/Global";
+    let Server1_CN_AD = Server1 + "/Android/" + android_hack + "/Chinese";
+    let Server1_OS_AD = Server1 + "/Android/" + android_hack + "/Global";
 
     // Android Server 2
-    let Server2_CN_AD = Server2 + "/Android/" + version + "/Chinese";
-    let Server2_OS_AD = Server2 + "/Android/" + version + "/Global";
+    let Server2_CN_AD = Server2 + "/Android/" + android_hack + "/Chinese";
+    let Server2_OS_AD = Server2 + "/Android/" + android_hack + "/Global";
 
     // Android Server 3
-    let Server3_CN_AD = Server3 + "/Android/" + version + "/Chinese";
-    let Server3_OS_AD = Server3 + "/Android/" + version + "/Global";
+    let Server3_CN_AD = Server3 + "/Android/" + android_hack + "/Chinese";
+    let Server3_OS_AD = Server3 + "/Android/" + android_hack + "/Global";
 
     // Metadata (PC)
     // - SV 1 (Patched)
@@ -219,9 +221,36 @@ function Genshin() {
                         <Online_GIO />
                     </div>
                 </div>
-                
+
+                <h3 className="text-center py-3">Tutorial How To Connect</h3>
+
+                <h4 className="text-center py-1">
+                    To connect to our server, please select device you are using:
+                </h4>
+
+                <div className="flex justify-center gap-2 py-3">
+                    <a href={`https://www.yuuki.me/2022/12/genshin-impact-private-server-pc.html`} className="btn btn-wide" target="_blank" rel="sponsored">
+                        PC
+                    </a>
+
+                    <a href={`https://www.yuuki.me/2022/12/genshin-impact-private-server-android.html`} className="btn btn-wide" target="_blank" rel="sponsored">
+                        Android
+                    </a>
+
+                    <a href={`https://www.yuuki.me/2022/12/genshin-impact-private-server-ios.html`} className="btn btn-wide" target="_blank" rel="sponsored">
+                        iOS
+                    </a>
+
+
+                </div>
+                <div className="flex justify-center gap-2 py-3">
+                    <a href={`https://file2.yuuki.me/Local_EU/Project/GenshinImpact/Tutorial`} className="btn btn-wide" target="_blank" rel="sponsored">
+                        Video Tutorial
+                    </a>
+                </div>
+
                 <div className="container mx-sm">
-                    <h3 className="text-center py-3">PC Launcher</h3>
+                    <h3 className="text-center py-3">PC Launcher 3.2 (3.3 Soon)</h3>
                     <h4 className="text-center py-1">
                         Cultivation requires Manual Patch UserAssembly. (scroll down)
                         <br />
@@ -245,7 +274,7 @@ function Genshin() {
                         </a>
                     </div>
 
-                    <h3 className="text-center py-3">Android Launcher</h3>
+                    <h3 className="text-center py-3">Android Launcher 3.2 (3.3 Soon)</h3>
                     <h4 className="text-center py-1">
                         V1 requires renaming game data for clone game, please read tutorial.
                         <br />
@@ -277,7 +306,7 @@ function Genshin() {
                     </div>
 
                     <h4 className="text-center py-3">
-                        We recommend using Launcher instead using manual methods!!!.
+                        We recommend using Launcher instead using manual methods!.
                         <br />
                         The list below is for people with experience in copying/pasting. if you don't understand don't
                         use/download.
@@ -306,77 +335,63 @@ function Genshin() {
 
                     <h4 className="text-center py-3">
                         You don't need to download game data if you already have latest official version.
-                        <br />
-                        So you only need UserAssembly Patch+Proxy (Fiddler).
                     </h4>
 
-                    <h3 className="text-center py-3">UserAssembly Patch (DL: Server Yuuki)</h3>
+                    <h3 className="text-center py-3">UserAssembly Patch for 3.1-3.2</h3>
                     <div className="flex justify-center gap-2 py-3">
                         <a href={`${UserAssembly_OS_PC_MOD2}`} className="btn btn-wide">
-                            Global
+                            Global YK
                         </a>
 
                         <a href={`${UserAssembly_CN_PC_MOD2}`} className="btn btn-wide">
-                            Chinese
+                            Chinese YK
                         </a>
                     </div>
-
-                    <h3 className="text-center py-3">UserAssembly Patch (DL: Server CF)</h3>
                     <div className="flex justify-center gap-2 py-3">
                         <a href={`${UserAssembly_OS_PC_MOD}`} className="btn btn-wide">
-                            Global
+                            Global CF
                         </a>
 
                         <a href={`${UserAssembly_CN_PC_MOD}`} className="btn btn-wide">
-                            Chinese
+                            Chinese CF
                         </a>
                     </div>
 
-                    <h3 className="text-center py-3">UserAssembly (DL: Server Original)</h3>
+                    <h3 className="text-center py-3">UserAssembly Original</h3>
                     <div className="flex justify-center gap-2 py-3">
                         <a href={`${UserAssembly_OS_PC_ORI}`} className="btn btn-wide">
                             Global
                         </a>
-
                         <a href={`${UserAssembly_CN_PC_ORI}`} className="btn btn-wide">
                             Chinese
                         </a>
                     </div>
 
-                    <h4 className="text-center py-3">
-                        Metadata patch is not needed if your version is 2.8+.
-                        <br />
-                        Don't download if you don't know anything.
-                    </h4>
-
-                    <h3 className="text-center py-3">Metadata Patch (DL: Server Yuuki)</h3>
+                    <h3 className="text-center py-3">Metadata Patch for 2.8-3.0</h3>
                     <div className="flex justify-center gap-2 py-3">
                         <a href={`${Metadata_OS_PC_MOD2}`} className="btn btn-wide">
-                            Global
+                            Global YK
                         </a>
 
                         <a href={`${Metadata_CN_PC_MOD2}`} className="btn btn-wide">
-                            Chinese
+                            Chinese YK
                         </a>
                     </div>
-
-                    <h3 className="text-center py-3">Metadata Patch (DL: Server CF)</h3>
                     <div className="flex justify-center gap-2 py-3">
                         <a href={`${Metadata_OS_PC_MOD}`} className="btn btn-wide">
-                            Global
+                            Global CF
                         </a>
 
                         <a href={`${Metadata_CN_PC_MOD}`} className="btn btn-wide">
-                            Chinese
+                            Chinese CF
                         </a>
                     </div>
 
-                    <h3 className="text-center py-3">Metadata (DL: Server Original)</h3>
+                    <h3 className="text-center py-3">Metadata Original</h3>
                     <div className="flex justify-center gap-2 py-3">
                         <a href={`${Metadata_OS_PC_ORI}`} className="btn btn-wide">
                             Global
                         </a>
-
                         <a href={`${Metadata_CN_PC_ORI}`} className="btn btn-wide">
                             Chinese
                         </a>
@@ -385,7 +400,7 @@ function Genshin() {
                     <div className="description">
                         <div className="new-line">
                             For downloading Game Data, we recommend always using Original Server instead Server CF
-                            because it has a rate limit from Google Drive. and to download Launcher use Yuuki Server.
+                            because it has a rate limit from Google Drive. and to download Launcher use Yuuki Server (YK).
                         </div>
                         <div className="new-line">
                             Some links are also not available if that happens please wait for a few hours or contact
