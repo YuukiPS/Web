@@ -5,11 +5,11 @@ export default function handler(req, res) {
         package: {
             os: {
                 url: "https://crepe.moe/c/WTv4TOcq.zip",
-                md6: "6DBAC00871BD45B35A6C84D2B5301A90",
+                md5: "6DBAC00871BD45B35A6C84D2B5301A90",
             },
             cn: {
                 url: "https://crepe.moe/c/WTv4TOcq.zip",
-                md6: "6DBAC00871BD45B35A6C84D2B5301A90",
+                md5: "6DBAC00871BD45B35A6C84D2B5301A90",
             },
         },
     });
