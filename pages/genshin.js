@@ -118,7 +118,7 @@ function Genshin() {
     let Server2_OS2 = Server2 + "/PC/" + version + "/Global";
     let Server2_CN2 = Server2 + "/PC/" + version + "/Chinese";
 
-    let android_hack = "3.2.0";
+    let android_hack = version;//"3.2.0";
 
     // Android Server 1
     let Server1_CN_AD = Server1 + "/Android/" + android_hack + "/Chinese";
@@ -250,7 +250,7 @@ function Genshin() {
                 </div>
 
                 <div className="container mx-sm">
-                    <h3 className="text-center py-3">PC Launcher 3.2 (3.3 Soon)</h3>
+                    <h3 className="text-center py-3">PC Launcher 3.3</h3>
                     <h4 className="text-center py-1">
                         Cultivation requires Manual Patch UserAssembly. (scroll down)
                         <br />
@@ -274,12 +274,12 @@ function Genshin() {
                         </a>
                     </div>
 
-                    <h3 className="text-center py-3">Android Launcher 3.2 (3.3 Soon)</h3>
+                    <h3 className="text-center py-3">Android Launcher 3.3</h3>
                     <h4 className="text-center py-1">
                         V1 requires renaming game data for clone game, please read tutorial.
                         <br />
                         V2 is better because it can download game data from in-game and no need to rename and play
-                        official version.
+                        official version. (SOON)
                         <br />
                         (Google,Facebook login not working)
                     </h4>
