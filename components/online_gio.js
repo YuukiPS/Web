@@ -10,7 +10,7 @@ export default function App() {
     var online = "Nobody";
     var sub_server = "Nobody";
 
-    const { data, error } = useSWR(`https://api-gs-ps.yuuki.me/server/gio`, fetcher);
+    const { data, error } = useSWR(`https://api-gs-ps.yuuki.me/api/server/gio`, fetcher);
     if (data) {
         if (data.code == 200) {
             if (data.data.online) {
