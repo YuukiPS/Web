@@ -200,7 +200,7 @@ function Genshin() {
                     </div>
                     <div className="new-line">
                         <a
-                            href="https://www.yuuki.me/2022/09/how-to-connect-genshin-impact-private.html"
+                            href="https://doc.yuuki.me/"
                             target="_blank"
                             rel="sponsored"
                         >
@@ -229,15 +229,15 @@ function Genshin() {
                 </h4>
 
                 <div className="flex justify-center gap-2 py-3">
-                    <a href={`https://www.yuuki.me/2022/12/genshin-impact-private-server-pc.html`} className="btn btn-wide" target="_blank" rel="sponsored">
+                    <a href={`https://doc.yuuki.me/docs/tutorial-connect/pc`} className="btn btn-wide" target="_blank" rel="sponsored">
                         PC
                     </a>
 
-                    <a href={`https://www.yuuki.me/2022/12/genshin-impact-private-server-android.html`} className="btn btn-wide" target="_blank" rel="sponsored">
+                    <a href={`https://doc.yuuki.me/docs/tutorial-connect/android`} className="btn btn-wide" target="_blank" rel="sponsored">
                         Android
                     </a>
 
-                    <a href={`https://www.yuuki.me/2022/12/genshin-impact-private-server-ios.html`} className="btn btn-wide" target="_blank" rel="sponsored">
+                    <a href={`https://doc.yuuki.me/docs/tutorial-connect/ios`} className="btn btn-wide" target="_blank" rel="sponsored">
                         iOS
                     </a>
 
