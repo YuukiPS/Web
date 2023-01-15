@@ -18,7 +18,7 @@ export default function Home() {
                             are freer to do anything.
                         </p>
                         <div class="flex justify-center gap-2">
-                            <a href="/command" class="btn btn-primary">
+                            <a href="https://ps2.yuuki.me/command" class="btn btn-primary">
                                 Web Command
                             </a>
 
