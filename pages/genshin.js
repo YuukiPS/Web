@@ -229,15 +229,15 @@ function Genshin() {
                 </h4>
 
                 <div className="flex justify-center gap-2 py-3">
-                    <a href={`https://doc.yuuki.me/docs/tutorial-connect/pc`} className="btn btn-wide" target="_blank" rel="sponsored">
+                    <a href={`https://doc.yuuki.me/docs/tutorial-connect/pc/install`} className="btn btn-wide" target="_blank" rel="sponsored">
                         PC
                     </a>
 
-                    <a href={`https://doc.yuuki.me/docs/tutorial-connect/android`} className="btn btn-wide" target="_blank" rel="sponsored">
+                    <a href={`https://doc.yuuki.me/docs/tutorial-connect/android/install`} className="btn btn-wide" target="_blank" rel="sponsored">
                         Android
                     </a>
 
-                    <a href={`https://doc.yuuki.me/docs/tutorial-connect/ios`} className="btn btn-wide" target="_blank" rel="sponsored">
+                    <a href={`https://doc.yuuki.me/docs/tutorial-connect/ios/install`} className="btn btn-wide" target="_blank" rel="sponsored">
                         iOS
                     </a>
 
