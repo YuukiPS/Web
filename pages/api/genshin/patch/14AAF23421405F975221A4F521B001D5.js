@@ -22,9 +22,9 @@ export default function handler(req, res) {
             // for check real file
             md5_check: {
                 os: {
-                    userassembly: "702671865EBA6BD49DB2DA707CF4B4EF",
-                    metadata: "D7E9C1FFB28DEC883697F5DED6B38A2D",
-                    mhypbase: "60A6AC12B5971DD4445108CE59D91C92",
+                    userassembly: "8638AC1CA9EBA525D9003F79A0DA76FC",
+                    metadata: "428DE48A17B7B4ABF1EBEC9B13D9C4DC",
+                    mhypbase: "080B392C1DC760B8243D2F0C7934E0FF",
                 },
                 cn: {
                     userassembly: "3DCE9FA8A7874C70575D38C4F839C229",
