@@ -250,7 +250,7 @@ function Genshin() {
                 </div>
 
                 <div className="container mx-sm">
-                    <h3 className="text-center py-3">PC Launcher 3.3</h3>
+                    <h3 className="text-center py-3">PC Launcher</h3>
                     <h4 className="text-center py-1">
                         Cultivation requires Manual Patch UserAssembly. (scroll down)
                         <br />
@@ -274,7 +274,7 @@ function Genshin() {
                         </a>
                     </div>
 
-                    <h3 className="text-center py-3">Android Launcher 3.3</h3>
+                    <h3 className="text-center py-3">Android Launcher</h3>
                     <h4 className="text-center py-1">
                         V1 requires renaming game data for clone game, please read tutorial.
                         <br />
