@@ -1,6 +1,4 @@
 import Layout, { siteTitle } from "../components/layout";
-import Online from "../components/online";
-import Online_GIO from "../components/online_gio";
 import Head from "next/head";
 import useSWR, { SWRConfig } from "swr";
 
@@ -198,35 +196,9 @@ function Genshin() {
                     <div className="new-line">
                         Currently version {version} {IsPre}, download link below.
                     </div>
-                    <div className="new-line">
-                        <a
-                            href="https://doc.yuuki.me/"
-                            target="_blank"
-                            rel="sponsored"
-                        >
-                            Tutorial Here
-                        </a>
-                    </div>
                 </div>
 
-                <div class="text-center py-3">
-                    <div class="stats bg-primary text-primary-content">
-                        <Online server="sg" />
-                        <Online server="eu" />
-                    </div>
-                </div>
-
-                <div class="text-center py-3">
-                    <div class="stats bg-primary text-primary-content">
-                        <Online_GIO />
-                    </div>
-                </div>
-
-                <h3 className="text-center py-3">Tutorial How To Connect</h3>
-
-                <h4 className="text-center py-1">
-                    To connect to our server, please select device you are using:
-                </h4>
+                <h3 className="text-center py-3">To connect to our server, please select device you are using</h3>
 
                 <div className="flex justify-center gap-2 py-3">
                     <a href={`https://doc.yuuki.me/docs/category/pc`} className="btn btn-wide" target="_blank" rel="sponsored">
@@ -246,6 +218,10 @@ function Genshin() {
                 <div className="flex justify-center gap-2 py-3">
                     <a href={`https://file2.yuuki.me/Local_EU/Project/GenshinImpact/Tutorial`} className="btn btn-wide" target="_blank" rel="sponsored">
                         Video Tutorial
+                    </a>
+
+                    <a href={`https://ps2.yuuki.me/game/genshin`} className="btn btn-wide" target="_blank" rel="sponsored">
+                        Stats Server
                     </a>
                 </div>
 

@@ -8,7 +8,10 @@ export default function Home() {
                 <title>{siteTitle}</title>
             </Head>
 
-            <div className="hero min-h-screen" style={{ backgroundImage: `url("/image/banner${Math.floor(Math.random() * 8) + 1}.png")` }}>
+            <div
+                className="hero min-h-screen"
+                style={{ backgroundImage: `url("/image/banner${Math.floor(Math.random() * 8) + 1}.png")` }}
+            >
                 <div className="hero-overlay bg-opacity-60"></div>
                 <div className="hero-content text-center text-neutral-content">
                     <div className="max-w-md">
@@ -18,9 +21,22 @@ export default function Home() {
                             are freer to do anything.
                         </p>
                         <div class="flex justify-center gap-2">
-                            <a href="https://ps2.yuuki.me/command" class="btn btn-primary">
-                                Web Command
-                            </a>
+                            <div className="dropdown dropdown-hover">
+                                <label tabIndex={0} className="btn btn-primary">
+                                    Web Command
+                                </label>
+                                <ul
+                                    tabIndex={0}
+                                    className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
+                                >
+                                    <li>
+                                        <a href="/command">V1</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://ps2.yuuki.me/command">V2</a>
+                                    </li>
+                                </ul>
+                            </div>
 
                             <div className="dropdown dropdown-hover">
                                 <label tabIndex={0} className="btn btn-primary">
@@ -31,14 +47,10 @@ export default function Home() {
                                     className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
                                 >
                                     <li>
-                                        <a href="/genshin">
-                                            Genshin Impact
-                                        </a>
+                                        <a href="/genshin">Genshin Impact</a>
                                     </li>
                                     <li>
-                                        <a href="/starrail">
-                                            Star Rail
-                                        </a>
+                                        <a href="/starrail">Star Rail</a>
                                     </li>
                                 </ul>
                             </div>
