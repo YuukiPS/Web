@@ -1,15 +1,15 @@
 export default function handler(req, res) {
     res.status(200).json({
         description: "todo",
-        version: "1.0.3",
+        version: "1.0.5",
         package: {
             os: {
-                url: "https://file2.yuuki.me/p/Public/Local_EU/Project/GenshinImpact/Data/PC/3.4.0/Global/Mod/Acrepi-v1.0.3.zip",
-                md5: "DC6708C5A5F91AB9B566AA8C9D6501A3",
+                url: "https://file2.yuuki.me/p/Public/Local_EU/Project/GenshinImpact/Mod/PC/Acrepi/Acrepi-v1.0.5.zip",
+                md5: "0866C90C6638DB008FDDFC866213D543",
             },
             cn: {
-                url: "https://file2.yuuki.me/p/Public/Local_EU/Project/GenshinImpact/Data/PC/3.4.0/Global/Mod/Acrepi-v1.0.3.zip",
-                md5: "DC6708C5A5F91AB9B566AA8C9D6501A3",
+                url: "https://file2.yuuki.me/p/Public/Local_EU/Project/GenshinImpact/Mod/PC/Acrepi/Acrepi-v1.0.5.zip",
+                md5: "0866C90C6638DB008FDDFC866213D543",
             },
         },
     });
