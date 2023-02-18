@@ -4,26 +4,26 @@ import useSWR from "swr";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
-function getLatest(region = "cn_cb") {
+function getLatest(region = "os_cb") {
     return useSWR(`api/starrail/download/latest/${region}`, fetcher).data;
 }
 
 export default function Genshin() {    
-    const raw_cn_cb = getLatest("cn_cb");
+    const raw_os_cb = getLatest("os_cb");
 
-    console.log(raw_cn_cb);
+    //console.log(raw_os_cb);
 
     let version = "Unknown";
 
     let DL_CN = "#";
     let Decompressed_CN = "#";
 
-    // for CN
-    if (raw_cn_cb) {
-        if (raw_cn_cb.data) {
-            if (raw_cn_cb.data.game) {
-                if (raw_cn_cb.data.game.latest) {
-                    var latest = raw_cn_cb.data.game.latest;
+    // for OS
+    if (raw_os_cb) {
+        if (raw_os_cb.data) {
+            if (raw_os_cb.data.game) {
+                if (raw_os_cb.data.game.latest) {
+                    var latest = raw_os_cb.data.game.latest;
 
                     if (latest.version) {
                         version = latest.version;
