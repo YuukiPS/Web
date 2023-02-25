@@ -120,7 +120,7 @@ export default function Command() {
                                 </label>
                                 <input
                                     type="text"
-                                    placeholder="sg.genshin.ps.yuuki.me"
+                                    placeholder="ps.yuuki.me"
                                     class="input input-bordered"
                                     id="server"
                                     name="server"

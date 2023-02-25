@@ -5,11 +5,11 @@ export default async function handler(req, res) {
         list: [
             {
                 name: "YuukiPS",
-                host: "genshin.ps.yuuki.me",
+                host: "login.yuuki.me",
                 game: "GS",
                 port: 443,
                 https: true,
-                version: "3.1.0",
+                version: "3.4.0",
             },
             {
                 name: "Localhost",
@@ -17,7 +17,7 @@ export default async function handler(req, res) {
                 game: "GS",
                 port: 443,
                 https: false,
-                version: "3.1.0",
+                version: "3.4.0",
             },
             {
                 name: "Official Servers",
@@ -25,7 +25,7 @@ export default async function handler(req, res) {
                 game: "GS",
                 port: 443,
                 https: true,
-                version: "3.1.0",
+                version: "3.4.0",
             },
         ],
     });
