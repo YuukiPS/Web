@@ -1,11 +1,11 @@
 export default function handler(req, res) {
     res.status(200).json({
         version: "3.5.0",
-        channel: "OS",
+        channel: "CN",
         release: "Global",
         patched: {
             metode: "RSA",
-            resources: "https://file2.yuuki.me/p/Public/Local_EU/Project/GenshinImpact/Data/PC/3.5.0/Global/",
+            resources: "https://file2.yuuki.me/p/Public/Local_EU/Project/GenshinImpact/Data/PC/3.5.0/Chinese/",
             key_patch: "",
             // for online patch
             md5_vaild: {
@@ -15,7 +15,7 @@ export default function handler(req, res) {
         },
         original: {
             resources:
-                "https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20230220120928_iIYV9krGiWL06eeB/ScatteredFiles/",
+                "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20230220120841_NrIMna0roQkFHA3c/ScatteredFiles/",
             key_find: {
                 cn: "",
                 os: "",
