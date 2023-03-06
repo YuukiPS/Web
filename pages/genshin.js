@@ -116,7 +116,7 @@ function Genshin() {
     let Server2_OS2 = Server2 + "/PC/" + version + "/Global";
     let Server2_CN2 = Server2 + "/PC/" + version + "/Chinese";
 
-    let android_hack = version;//"3.2.0";
+    let android_hack = version; //"3.2.0";
 
     // Android Server 1
     let Server1_CN_AD = Server1 + "/Android/" + android_hack + "/Chinese";
@@ -129,6 +129,10 @@ function Genshin() {
     // Android Server 3
     let Server3_CN_AD = Server3 + "/Android/" + android_hack + "/Chinese";
     let Server3_OS_AD = Server3 + "/Android/" + android_hack + "/Global";
+
+    // iOS Server 2
+    let Server2_CN_iOS = Server2 + "/IOS/" + version + "/Chinese";
+    let Server2_OS_iOS = Server2 + "/IOS/" + version + "/Global";
 
     // Metadata (PC)
     // - SV 1 (Patched)
@@ -152,6 +156,10 @@ function Genshin() {
     let UserAssembly_OS_PC_MOD2 = Server2_OS2 + "/Patch/UserAssembly-patched.dll";
     let UserAssembly_CN_PC_MOD2 = Server2_CN2 + "/Patch/UserAssembly-patched.dll";
 
+    // RSA
+    let RSA_OS_PC_MOD = Server1_OS_PC + "/Patch/RSAPatch.dll";
+    let RSA_CN_PC_MOD = Server1_CN_PC + "/Patch/RSAPatch.dll";
+
     // Launcher Android (Official)
     let DL_OS_AD_MOD1 = Server1_OS_AD + "/YuukiPS.apk";
     let DL_OS_AD_MOD2 = Server1_OS_AD + "/YuukiPS_V2.apk";
@@ -165,7 +173,11 @@ function Genshin() {
     let DL_OS_AD2_MOD1 = Server2_OS_AD + "/YuukiPS.apk";
     let DL_OS_AD2_MOD2 = Server2_OS_AD + "/YuukiPS_V2.apk";
 
-    let DL_CN_AD2 = Server2_CN_AD + "/YuukiPS.apk";
+    let DL_OS_iOS2_MOD1 = Server2_OS_iOS + "/YuukiPS.ipa";
+
+    let DL_CN_AD2_MOD1 = Server2_CN_AD + "/YuukiPS.apk";
+    let DL_CN_AD2_MOD2 = Server2_CN_AD + "/YuukiPS_V2.apk";
+
     // Launcher Android (Unofficial)
     let DL_OS_AD2_UNO = Server2_OS_AD + "/ChinesePS.apk";
     let DL_CN_AD2_UNO = Server2_CN_AD + "/ChinesePS.apk";
@@ -201,26 +213,49 @@ function Genshin() {
                 <h3 className="text-center py-3">To connect to our server, please select device you are using</h3>
 
                 <div className="flex justify-center gap-2 py-3">
-                    <a href={`https://doc.yuuki.me/docs/category/pc`} className="btn btn-wide" target="_blank" rel="sponsored">
+                    <a
+                        href={`https://doc.yuuki.me/docs/category/pc`}
+                        className="btn btn-wide"
+                        target="_blank"
+                        rel="sponsored"
+                    >
                         PC
                     </a>
 
-                    <a href={`https://doc.yuuki.me/docs/category/android`} className="btn btn-wide" target="_blank" rel="sponsored">
+                    <a
+                        href={`https://doc.yuuki.me/docs/category/android`}
+                        className="btn btn-wide"
+                        target="_blank"
+                        rel="sponsored"
+                    >
                         Android
                     </a>
 
-                    <a href={`https://doc.yuuki.me/docs/tutorial-connect/ios`} className="btn btn-wide" target="_blank" rel="sponsored">
+                    <a
+                        href={`https://doc.yuuki.me/docs/tutorial-connect/ios`}
+                        className="btn btn-wide"
+                        target="_blank"
+                        rel="sponsored"
+                    >
                         iOS
                     </a>
-
-
                 </div>
                 <div className="flex justify-center gap-2 py-3">
-                    <a href={`https://file2.yuuki.me/Local_EU/Project/GenshinImpact/Tutorial`} className="btn btn-wide" target="_blank" rel="sponsored">
+                    <a
+                        href={`https://file2.yuuki.me/Local_EU/Project/GenshinImpact/Tutorial`}
+                        className="btn btn-wide"
+                        target="_blank"
+                        rel="sponsored"
+                    >
                         Video Tutorial
                     </a>
 
-                    <a href={`https://ps2.yuuki.me/game/genshin`} className="btn btn-wide" target="_blank" rel="sponsored">
+                    <a
+                        href={`https://ps2.yuuki.me/game/genshin`}
+                        className="btn btn-wide"
+                        target="_blank"
+                        rel="sponsored"
+                    >
                         Stats Server
                     </a>
                 </div>
@@ -228,7 +263,7 @@ function Genshin() {
                 <div className="container mx-sm">
                     <h3 className="text-center py-3">PC Launcher</h3>
                     <h4 className="text-center py-1">
-                        Cultivation requires Manual Patch UserAssembly. (scroll down)
+                        Cultivation requires manual patch RSAPatch. (scroll down)
                         <br />
                         YuukiPS Launcher requires{" "}
                         <a
@@ -252,32 +287,38 @@ function Genshin() {
 
                     <h3 className="text-center py-3">Android Launcher</h3>
                     <h4 className="text-center py-1">
-                        V1 requires renaming game data for clone game, please read tutorial.
+                        V1 Support Download Game Data directly and Clone but not support Localhost.
                         <br />
-                        V2 is better because it can download game data from in-game and no need to rename and play
-                        official version. (SOON)
+                        V2 Supports Direct Download, Localhost, Clone. (SOON)
                         <br />
-                        (Google,Facebook login not working)
+                        (Google,Facebook login not working && can't play official server)
                     </h4>
                     <div className="flex justify-center gap-2 py-3">
                         <a href={`${DL_OS_AD2_MOD1}`} className="btn btn-wide">
-                            V1 (DL1)
+                            V1 (Global)
                         </a>
-                        <a href={`${DL_OS_AD2_MOD2}`} className="btn btn-wide">
-                            V2 (DL1)
+                        <a href={`${DL_CN_AD2_MOD1}`} className="btn btn-wide">
+                            V1 (China)
                         </a>
                     </div>
                     <div className="flex justify-center gap-2 py-3">
-                        <a href={`${DL_OS_AD_MOD1}`} className="btn btn-wide">
-                            V1 (DL2)
+                        <a href={`${DL_OS_AD2_MOD2}`} className="btn btn-wide">
+                            V2 (Global)
                         </a>
-                        <a href={`${DL_OS_AD_MOD2}`} className="btn btn-wide">
-                            V2 (DL2)
+                        <a href={`${DL_CN_AD2_MOD2}`} className="btn btn-wide">
+                            V2 (China)
                         </a>
                     </div>
                     <div className="flex justify-center gap-2 py-3">
                         <a href={`${DL_OS_AD3_DATA}`} className="btn btn-wide">
                             Data Game (DL3)
+                        </a>
+                    </div>
+
+                    <h3 className="text-center py-3">iOS Launcher</h3>
+                    <div className="flex justify-center gap-2 py-3">
+                        <a href={`${DL_OS_iOS2_MOD1}`} className="btn btn-wide">
+                            Global
                         </a>
                     </div>
 
@@ -313,70 +354,18 @@ function Genshin() {
                         You don't need to download game data if you already have latest official version.
                     </h4>
 
-                    <h3 className="text-center py-3">UserAssembly Patch for 3.1-3.2</h3>
+                    <h3 className="text-center py-3">RSAPatch Patch for 3.3+</h3>
                     <div className="flex justify-center gap-2 py-3">
-                        <a href={`${UserAssembly_OS_PC_MOD2}`} className="btn btn-wide">
-                            Global YK
-                        </a>
-
-                        <a href={`${UserAssembly_CN_PC_MOD2}`} className="btn btn-wide">
-                            Chinese YK
-                        </a>
-                    </div>
-                    <div className="flex justify-center gap-2 py-3">
-                        <a href={`${UserAssembly_OS_PC_MOD}`} className="btn btn-wide">
-                            Global CF
-                        </a>
-
-                        <a href={`${UserAssembly_CN_PC_MOD}`} className="btn btn-wide">
-                            Chinese CF
-                        </a>
-                    </div>
-
-                    <h3 className="text-center py-3">UserAssembly Original</h3>
-                    <div className="flex justify-center gap-2 py-3">
-                        <a href={`${UserAssembly_OS_PC_ORI}`} className="btn btn-wide">
+                        <a href={`${RSA_OS_PC_MOD}`} className="btn btn-wide">
                             Global
-                        </a>
-                        <a href={`${UserAssembly_CN_PC_ORI}`} className="btn btn-wide">
-                            Chinese
-                        </a>
-                    </div>
-
-                    <h3 className="text-center py-3">Metadata Patch for 2.8-3.0</h3>
-                    <div className="flex justify-center gap-2 py-3">
-                        <a href={`${Metadata_OS_PC_MOD2}`} className="btn btn-wide">
-                            Global YK
-                        </a>
-
-                        <a href={`${Metadata_CN_PC_MOD2}`} className="btn btn-wide">
-                            Chinese YK
-                        </a>
-                    </div>
-                    <div className="flex justify-center gap-2 py-3">
-                        <a href={`${Metadata_OS_PC_MOD}`} className="btn btn-wide">
-                            Global CF
-                        </a>
-
-                        <a href={`${Metadata_CN_PC_MOD}`} className="btn btn-wide">
-                            Chinese CF
-                        </a>
-                    </div>
-
-                    <h3 className="text-center py-3">Metadata Original</h3>
-                    <div className="flex justify-center gap-2 py-3">
-                        <a href={`${Metadata_OS_PC_ORI}`} className="btn btn-wide">
-                            Global
-                        </a>
-                        <a href={`${Metadata_CN_PC_ORI}`} className="btn btn-wide">
-                            Chinese
                         </a>
                     </div>
 
                     <div className="description">
                         <div className="new-line">
                             For downloading Game Data, we recommend always using Original Server instead Server CF
-                            because it has a rate limit from Google Drive. and to download Launcher use Yuuki Server (YK).
+                            because it has a rate limit from Google Drive. and to download Launcher use Yuuki Server
+                            (YK).
                         </div>
                         <div className="new-line">
                             Some links are also not available if that happens please wait for a few hours or contact
