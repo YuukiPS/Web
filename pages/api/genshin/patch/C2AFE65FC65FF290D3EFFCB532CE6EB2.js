@@ -9,8 +9,8 @@ export default function handler(req, res) {
             key_patch: "",
             // for online patch
             md5_vaild: {
-                os: "505665EEC269D92CC7AEE7FBA0DA01FD", // md5 for patch
-                cn: "505665EEC269D92CC7AEE7FBA0DA01FD",
+                os: "F3466B6FC8BD2C32C137580F40C25E7C", // md5 for patch
+                cn: "F3466B6FC8BD2C32C137580F40C25E7C",
             },
         },
         original: {
