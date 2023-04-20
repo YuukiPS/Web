@@ -3678,7 +3678,7 @@ export default function handler(req, res) {
             comment: "1.6.2",
             important: false,
             gachaType: 302,
-            scheduleId: 2,
+            scheduleId: 29,
             prefabPath: "GachaShowPanel_A047",
             titlePath: "UI_GACHA_SHOW_PANEL_A020_TITLE",
             costItemId: 223,
