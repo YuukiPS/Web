@@ -66,14 +66,14 @@ export default function Genshin() {
                     <h3 class="text-center py-3">PC Full Data (DL: Server Original)</h3>
                     <div class="flex justify-center gap-2 py-3">
                         <a href={`${DL_OS}`} class="btn btn-wide">
-                            China
+                            Global
                         </a>
                     </div>
 
                     <h3 class="text-center py-3">PC Full Data (DL: Server CF)</h3>
                     <div class="flex justify-center gap-2 py-3">
                         <a href={`${DL_OS_Backup}`} class="btn btn-wide">
-                            China
+                            Global
                         </a>
                     </div>
 
