@@ -4,37 +4,40 @@ import useSWR from "swr";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
-function getLatest(region = "os_cb") {
+function getLatest(region = "os") {
     return useSWR(`api/starrail/download/latest/${region}`, fetcher).data;
 }
 
 export default function Genshin() {    
-    const raw_os_cb = getLatest("os_cb");
+    const raw_os = getLatest("os");
 
-    //console.log(raw_os_cb);
+    //console.log(raw_os);
 
     let version = "Unknown";
 
     let DL_CN = "#";
     let Decompressed_CN = "#";
 
+    let DL_OS = "#";
+    let Decompressed_OS = "#";
+
     // for OS
-    if (raw_os_cb) {
-        if (raw_os_cb.data) {
-            if (raw_os_cb.data.game) {
-                if (raw_os_cb.data.game.latest) {
-                    var latest = raw_os_cb.data.game.latest;
+    if (raw_os) {
+        if (raw_os.data) {
+            if (raw_os.data.game) {
+                if (raw_os.data.game.latest) {
+                    var latest = raw_os.data.game.latest;
 
                     if (latest.version) {
                         version = latest.version;
                     }
 
                     if (latest.path) {
-                        DL_CN = latest.path;
+                        DL_OS = latest.path;
                     }
 
                     if (latest.decompressed_path) {
-                        Decompressed_CN = latest.decompressed_path;
+                        Decompressed_OS = latest.decompressed_path;
                     }
                 }
             }
@@ -42,9 +45,9 @@ export default function Genshin() {
     }
 
     // Server CloudFlare
-    let Server1 = "https://file.yuuki.me/0:/Project/StarRail/Data";
-    let Server1_CN_PC = Server1 + "/PC/" + version + "/Beta/Chinese";
-    let DL_CN_Backup = Server1_CN_PC + "/" + DL_CN.substring(DL_CN.lastIndexOf("/") + 1);
+    let Server1 = "https://file2.yuuki.me/GD1/Project/StarRail/Data";
+    let Server1_OS_PC = Server1 + "/PC/" + version + "/Global";
+    let DL_OS_Backup = Server1_OS_PC + "/" + DL_OS.substring(DL_OS.lastIndexOf("/") + 1);
 
     return (
         <>
@@ -62,14 +65,14 @@ export default function Genshin() {
 
                     <h3 class="text-center py-3">PC Full Data (DL: Server Original)</h3>
                     <div class="flex justify-center gap-2 py-3">
-                        <a href={`${DL_CN}`} class="btn btn-wide">
+                        <a href={`${DL_OS}`} class="btn btn-wide">
                             China
                         </a>
                     </div>
 
                     <h3 class="text-center py-3">PC Full Data (DL: Server CF)</h3>
                     <div class="flex justify-center gap-2 py-3">
-                        <a href={`${DL_CN_Backup}`} class="btn btn-wide">
+                        <a href={`${DL_OS_Backup}`} class="btn btn-wide">
                             China
                         </a>
                     </div>
