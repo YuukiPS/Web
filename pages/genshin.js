@@ -116,6 +116,10 @@ function Genshin() {
     let Server2_OS2 = Server2 + "/PC/" + version + "/Global";
     let Server2_CN2 = Server2 + "/PC/" + version + "/Chinese";
 
+    // PC Server 3
+    let Server3_OS_PC = Server3 + "/PC/" + version + "/Global";
+    let Server3_CN_PC = Server3 + "/PC/" + version + "/Chinese";
+
     let android_hack = version; //"3.2.0";
 
     // Android Server 1
@@ -157,8 +161,8 @@ function Genshin() {
     let UserAssembly_CN_PC_MOD2 = Server2_CN2 + "/Patch/UserAssembly-patched.dll";
 
     // RSA
-    let RSA_OS_PC_MOD = Server1_OS_PC + "/Patch/RSAPatch.dll";
-    let RSA_CN_PC_MOD = Server1_CN_PC + "/Patch/RSAPatch.dll";
+    let RSA_OS_PC_MOD = Server2_OS2 + "/Patch/RSAPatch.dll";
+    let RSA_CN_PC_MOD = Server2_CN2 + "/Patch/RSAPatch.dll";
 
     // Launcher Android (Official)
     let DL_OS_AD_MOD1 = Server1_OS_AD + "/YuukiPS.apk";
@@ -315,12 +319,6 @@ function Genshin() {
                         </a>
                     </div>
 
-                    <h3 className="text-center py-3">iOS Launcher</h3>
-                    <div className="flex justify-center gap-2 py-3">
-                        <a href={`${DL_OS_iOS2_MOD1}`} className="btn btn-wide">
-                            Global
-                        </a>
-                    </div>
 
                     <h4 className="text-center py-3">
                         We recommend using Launcher instead using manual methods!.
