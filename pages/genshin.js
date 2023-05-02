@@ -189,8 +189,8 @@ function Genshin() {
     // Data
     let DL_OS_AD3_DATA = Server3_OS_AD + "/Part";
 
-    let DL_OS_Backup = Server1_OS_PC + "/" + DL_OS.substring(DL_OS.lastIndexOf("/") + 1);
-    let DL_CN_Backup = Server1_CN_PC + "/" + DL_CN.substring(DL_CN.lastIndexOf("/") + 1);
+    let DL_OS_Backup = Server3_OS_PC + "/" + DL_OS.substring(DL_OS.lastIndexOf("/") + 1);
+    let DL_CN_Backup = Server3_CN_PC + "/" + DL_CN.substring(DL_CN.lastIndexOf("/") + 1);
 
     // Server Official
     // Metadata
@@ -291,31 +291,23 @@ function Genshin() {
 
                     <h3 className="text-center py-3">Android Launcher</h3>
                     <h4 className="text-center py-1">
-                        V1 Support Download Game Data directly and Clone but not support Localhost.
+                        Support Download Game Data Directly and Clone APK.
                         <br />
-                        V2 Supports Direct Download, Localhost, Clone. (SOON)
+                        For localhost support: visit mihoyu.cn.
                         <br />
                         (Google,Facebook login not working && can't play official server)
                     </h4>
                     <div className="flex justify-center gap-2 py-3">
                         <a href={`${DL_OS_AD2_MOD1}`} className="btn btn-wide">
-                            V1 (Global)
+                            Android Launcher<br />Global
                         </a>
                         <a href={`${DL_CN_AD2_MOD1}`} className="btn btn-wide">
-                            V1 (China)
-                        </a>
-                    </div>
-                    <div className="flex justify-center gap-2 py-3">
-                        <a href={`${DL_OS_AD2_MOD2}`} className="btn btn-wide">
-                            V2 (Global)
-                        </a>
-                        <a href={`${DL_CN_AD2_MOD2}`} className="btn btn-wide">
-                            V2 (China)
+                            Android Launcher<br />China
                         </a>
                     </div>
                     <div className="flex justify-center gap-2 py-3">
                         <a href={`${DL_OS_AD3_DATA}`} className="btn btn-wide">
-                            Data Game (DL3)
+                            Data Game
                         </a>
                     </div>
 
@@ -338,7 +330,7 @@ function Genshin() {
                         </a>
                     </div>
 
-                    <h3 className="text-center py-3">PC Full Data (DL: Server CF)</h3>
+                    <h3 className="text-center py-3">PC Full Data (DL: Server GD1)</h3>
                     <div className="flex justify-center gap-2 py-3">
                         <a href={`${DL_OS_Backup}`} className="btn btn-wide">
                             Global
